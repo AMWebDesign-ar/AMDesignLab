@@ -2,7 +2,19 @@
 
 ## Overview
 
-AM Web Studio is a web development agency landing page targeting the Argentinian market. The site is built as a modern, dark-themed single-page application showcasing web development, SEO, and automation services. The application follows a tech-forward minimalist design inspired by companies like Vercel, Stripe, and Linear, with content primarily in Spanish.
+AM Web Studio is a professional one-page website for a digital agency targeting small businesses, professionals, and entrepreneurs in Argentina. The site showcases web development, SEO, and automation services with a modern dark theme and blue accents. Built with React and Tailwind CSS, it features smooth animations, responsive design, and dark/light theme toggle.
+
+### Website Sections
+1. **Header**: Fixed navigation with logo, nav links, theme toggle, and WhatsApp CTA
+2. **Hero**: Full-screen section with background image, main headline "Desarrollo de sitios web a medida", and CTAs
+3. **Services**: 3 service cards (Sitios Web, SEO, Automatización) with icons and descriptions
+4. **Why Choose Us**: 4 benefit items with checkmarks (Soluciones a medida, Enfoque en resultados, etc.)
+5. **Contact**: Invitation text, WhatsApp CTA, and email display
+6. **Footer**: Branding, tagline, and contact email
+
+### Contact Information
+- Email: contacto.amdigital@gmail.com
+- WhatsApp: Placeholder link (update WHATSAPP_LINK in home.tsx)
 
 ## User Preferences
 
