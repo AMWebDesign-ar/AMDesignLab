@@ -11,7 +11,9 @@ import {
   MessageCircle, 
   Mail,
   ArrowRight,
-  ArrowUp
+  ArrowUp,
+  Menu,
+  X
 } from "lucide-react";
 import heroImage from "@assets/generated_images/dark_tech_workspace_hero.png";
 import logoImage from "@assets/3f8056a9-1bc4-499f-aaf6-703a3d27b814_1768005490289.png";
@@ -34,6 +36,18 @@ const staggerContainer = {
 };
 
 function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#servicios", label: "Servicios" },
+    { href: "#nosotros", label: "Nosotros" },
+    { href: "#contacto", label: "Contacto" },
+  ];
+
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50" data-testid="header">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
@@ -42,38 +56,75 @@ function Header() {
           <span className="font-semibold text-foreground tracking-tight">AM Web Studio</span>
         </a>
         <nav className="hidden md:flex items-center gap-6" data-testid="nav-main">
-          <a 
-            href="#servicios" 
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            data-testid="link-servicios"
-          >
-            Servicios
-          </a>
-          <a 
-            href="#nosotros" 
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            data-testid="link-nosotros"
-          >
-            Nosotros
-          </a>
-          <a 
-            href="#contacto" 
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            data-testid="link-contacto"
-          >
-            Contacto
-          </a>
+          {navLinks.map((link) => (
+            <a 
+              key={link.href}
+              href={link.href} 
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              data-testid={`link-${link.label.toLowerCase()}`}
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button asChild size="sm" data-testid="button-header-whatsapp">
+          <Button asChild size="sm" className="hidden sm:flex" data-testid="button-header-whatsapp">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp
             </a>
           </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            data-testid="button-mobile-menu"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </Button>
         </div>
       </div>
+      
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-background/95 backdrop-blur-md border-b border-border"
+            data-testid="mobile-menu"
+          >
+            <nav className="flex flex-col px-6 py-4 gap-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors py-2"
+                  onClick={handleNavClick}
+                  data-testid={`link-mobile-${link.label.toLowerCase()}`}
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-base text-primary hover:text-primary/80 transition-colors py-2"
+                onClick={handleNavClick}
+                data-testid="link-mobile-whatsapp"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
+              </a>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
