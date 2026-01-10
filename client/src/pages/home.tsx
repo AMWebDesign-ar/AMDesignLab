@@ -12,8 +12,9 @@ import {
   ArrowRight
 } from "lucide-react";
 import heroImage from "@assets/generated_images/dark_tech_workspace_hero.png";
+import logoImage from "@assets/3f8056a9-1bc4-499f-aaf6-703a3d27b814_1768005490289.png";
 
-const WHATSAPP_LINK = "https://wa.me/5491100000000";
+const WHATSAPP_LINK = "https://wa.me/542236663939";
 const EMAIL = "contacto.amdigital@gmail.com";
 
 const fadeInUp = {
@@ -35,9 +36,7 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50" data-testid="header">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         <div className="flex items-center gap-2" data-testid="logo-brand">
-          <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">AM</span>
-          </div>
+          <img src={logoImage} alt="AM Digital" className="w-10 h-10 rounded-full object-cover" />
           <span className="font-semibold text-foreground tracking-tight">AM Web Studio</span>
         </div>
         <nav className="hidden md:flex items-center gap-6" data-testid="nav-main">
@@ -324,9 +323,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-2">
             <div className="flex items-center gap-2" data-testid="footer-brand">
-              <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">AM</span>
-              </div>
+              <img src={logoImage} alt="AM Digital" className="w-10 h-10 rounded-full object-cover" />
               <span className="font-semibold text-foreground tracking-tight">AM Web Studio</span>
             </div>
             <p className="text-sm text-muted-foreground" data-testid="text-footer-tagline">Desarrollo de Sitios Web</p>
