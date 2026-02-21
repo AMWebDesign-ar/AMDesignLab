@@ -390,7 +390,13 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-2">
             <div className="flex items-center gap-2" data-testid="footer-brand">
-              <img src={logoImage} alt="AM Digital" className="w-10 h-10 rounded-full object-cover" />
+              <motion.img 
+                src={logoImage} 
+                alt="AM Digital" 
+                className="w-10 h-10 rounded-full object-cover"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
               <span className="font-semibold text-foreground tracking-tight">AM Web Studio</span>
             </div>
             <p className="text-sm text-muted-foreground" data-testid="text-footer-tagline">Desarrollo de Sitios Web</p>
