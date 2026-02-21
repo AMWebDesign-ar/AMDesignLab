@@ -59,7 +59,11 @@ function Header() {
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
-          <span className="font-semibold text-foreground tracking-tight">AM Web Studio</span>
+          <motion.span 
+            className="font-semibold text-foreground tracking-tight inline-block"
+            animate={{ rotate: [0, 2, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          >AM Web Studio</motion.span>
         </a>
         <nav className="hidden md:flex items-center gap-6" data-testid="nav-main">
           {navLinks.map((link) => (
