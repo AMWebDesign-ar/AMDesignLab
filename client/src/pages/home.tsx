@@ -335,10 +335,10 @@ function ContactSection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-contacto-title">
-            ¿Listo para empezar?
+            Hagamos crecer tu negocio
           </h2>
           <p className="text-muted-foreground text-lg mb-8" data-testid="text-contacto-subtitle">
-            Contanos sobre tu proyecto y te encontramos la mejor solución para tu negocio.
+            Escribinos y empezamos a trabajar juntos en tu próximo proyecto.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
