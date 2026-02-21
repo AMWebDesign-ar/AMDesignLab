@@ -78,7 +78,7 @@ function Header() {
           >
             Servicios
           </a>
-          <span className="w-px h-4 bg-border/60" />
+          <span className="w-px h-4 bg-foreground/30" />
           <a 
             href="#nosotros"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
