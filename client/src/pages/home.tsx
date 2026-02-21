@@ -176,9 +176,9 @@ function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
           variants={fadeInUp}
         >
-          <Button asChild size="lg" className="text-base px-8" data-testid="button-hero-whatsapp">
+          <Button asChild size="default" className="text-sm px-6" data-testid="button-hero-whatsapp">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-5 h-5 mr-2" />
+              <MessageCircle className="w-4 h-4 mr-2" />
               Consultá por WhatsApp
             </a>
           </Button>
@@ -345,9 +345,9 @@ function ContactSection() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <Button asChild size="lg" className="text-base px-8 w-full sm:w-auto" data-testid="button-contact-whatsapp">
+            <Button asChild size="default" className="text-sm px-6 w-full sm:w-auto" data-testid="button-contact-whatsapp">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-4 h-4 mr-2" />
                 Consultá por WhatsApp
               </a>
             </Button>
