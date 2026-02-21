@@ -69,12 +69,6 @@ function Header() {
         </nav>
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button asChild size="sm" className="hidden sm:flex" data-testid="button-header-whatsapp">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              WhatsApp
-            </a>
-          </Button>
           <Button
             variant="ghost"
             size="icon"
