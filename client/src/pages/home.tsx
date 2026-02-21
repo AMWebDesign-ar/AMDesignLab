@@ -168,12 +168,26 @@ function HeroSection() {
         variants={staggerContainer}
       >
         <motion.div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm mb-8 overflow-hidden relative"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm mb-2 overflow-hidden relative"
           variants={fadeInUp}
           data-testid="badge-hero"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-          <span className="text-base text-foreground/90 relative z-10">✦ Desarrollo y diseño web profesional ✦ Proyectos para marcas y emprendedores en Argentina ✦ Webs para vender desde el primer día</span>
+          <span className="text-base text-foreground/90 relative z-10">✦ Desarrollo y diseño web profesional</span>
+        </motion.div>
+        <motion.div 
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm mb-2 overflow-hidden relative"
+          variants={fadeInUp}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+          <span className="text-base text-foreground/90 relative z-10">✦ Proyectos para marcas y emprendedores en Argentina</span>
+        </motion.div>
+        <motion.div 
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm mb-8 overflow-hidden relative"
+          variants={fadeInUp}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+          <span className="text-base text-foreground/90 relative z-10">✦ Webs para vender desde el primer día</span>
         </motion.div>
         
         <motion.h1 
