@@ -21,7 +21,7 @@ import logoImage from "@assets/3f8056a9-1bc4-499f-aaf6-703a3d27b814_176800549028
 
 const WHATSAPP_LINK = "https://wa.me/542236663939";
 const EMAIL = "contacto.amdigital@gmail.com";
-const PHONE = "+54 9 2236 66-3939";
+const PHONE = "5492236663939";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
