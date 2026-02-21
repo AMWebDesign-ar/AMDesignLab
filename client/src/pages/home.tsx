@@ -177,7 +177,7 @@ function HeroSection() {
         </motion.div>
         
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] drop-shadow-lg"
+          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)]"
           variants={fadeInUp}
           data-testid="text-hero-title"
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
