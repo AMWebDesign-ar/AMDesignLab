@@ -153,7 +153,7 @@ function HeroSection() {
           variants={fadeInUp}
           data-testid="text-hero-title"
         >
-          Hacemos crecer
+          Potenciamos
           <br />
           <span className="text-primary">tu negocio digital</span>
         </motion.h1>
