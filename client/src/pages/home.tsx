@@ -51,7 +51,6 @@ function Header() {
   const navLinks = [
     { href: "#servicios", label: "Servicios" },
     { href: "#nosotros", label: "Nosotros" },
-    { href: "#contacto", label: "Contacto" },
   ];
 
   const handleNavClick = () => {
@@ -82,6 +81,13 @@ function Header() {
               {link.label}
             </a>
           ))}
+          <a 
+            href="#contacto"
+            className="text-sm font-semibold px-5 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            data-testid="link-hablemos"
+          >
+            HABLEMOS
+          </a>
         </nav>
         <div className="flex items-center gap-2">
           <ThemeToggle />
@@ -121,15 +127,12 @@ function Header() {
                 </a>
               ))}
               <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-base text-primary hover:text-primary/80 transition-colors py-2"
+                href="#contacto"
+                className="text-center text-sm font-semibold px-5 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mt-2"
                 onClick={handleNavClick}
-                data-testid="link-mobile-whatsapp"
+                data-testid="link-mobile-hablemos"
               >
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp
+                HABLEMOS
               </a>
             </nav>
           </motion.div>
