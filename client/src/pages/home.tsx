@@ -341,7 +341,7 @@ function ContactSection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-contacto-title">
-            Hagamos crecer tu negocio
+            Hagamos crecer tu marca
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <div className="flex items-center gap-2 text-muted-foreground">
