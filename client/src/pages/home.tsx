@@ -158,8 +158,8 @@ function HeroSection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-background/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/75 via-background/55 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/65 via-transparent to-background/65" />
       
       <motion.div 
         className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10"
