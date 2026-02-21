@@ -281,7 +281,7 @@ function ServicesSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card 
-                  className={`group p-8 h-full bg-card border-card-border cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out ${isOpen ? 'border-primary/40 shadow-[0_0_15px_rgba(59,130,246,0.06)]' : ''}`}
+                  className={`group p-8 h-full bg-card border-card-border cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out ${isOpen ? 'border-primary/40 shadow-[0_0_15px_rgba(59,130,246,0.06)] bg-[hsl(220,8%,16%)]' : ''}`}
                   data-testid={`card-service-${index}`}
                   onClick={() => toggleCard(index)}
                 >
