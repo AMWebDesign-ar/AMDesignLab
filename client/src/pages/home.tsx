@@ -8,6 +8,7 @@ import {
   Search, 
   Zap, 
   Share2,
+  Plus,
   CheckCircle2, 
   MessageCircle, 
   Mail,
@@ -220,26 +221,36 @@ const services = [
   {
     icon: Code2,
     title: "Sitios Web",
-    description: "Desarrollamos sitios web modernos, rápidos y optimizados para convertir visitantes en clientes. Diseño responsive y experiencia de usuario excepcional."
+    description: "Desarrollamos sitios web modernos, rápidos y optimizados para convertir visitantes en clientes.",
+    details: "Diseño responsive, velocidad de carga optimizada, integración con herramientas de analítica y experiencia de usuario excepcional. Tu sitio listo para vender desde el primer día."
   },
   {
     icon: Search,
     title: "SEO",
-    description: "Posicionamos tu negocio en los primeros resultados de Google. Estrategias de SEO que aumentan tu visibilidad y atraen clientes potenciales."
+    description: "Posicionamos tu negocio en los primeros resultados de Google.",
+    details: "Auditoría técnica, optimización on-page, estrategia de keywords y link building. Aumentamos tu visibilidad orgánica y atraemos clientes potenciales de forma sostenible."
   },
   {
     icon: Zap,
     title: "Automatización",
-    description: "Automatizamos procesos repetitivos para que tu negocio funcione de manera más eficiente. Ahorrá tiempo y recursos con soluciones inteligentes."
+    description: "Automatizamos procesos repetitivos para que tu negocio sea más eficiente.",
+    details: "Flujos de trabajo automáticos, integración entre plataformas, respuestas automáticas y reportes. Ahorrá tiempo y recursos con soluciones inteligentes."
   },
   {
     icon: Share2,
     title: "Contenido para Redes",
-    description: "Creamos contenido atractivo y estratégico para tus redes sociales. Publicaciones que conectan con tu audiencia y potencian tu marca."
+    description: "Creamos contenido atractivo y estratégico para tus redes sociales.",
+    details: "Diseño de posts, calendario editorial, estrategia de contenido y análisis de métricas. Publicaciones que conectan con tu audiencia y potencian tu marca."
   }
 ];
 
 function ServicesSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleCard = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section id="servicios" className="py-20 md:py-32 relative bg-[hsl(220,8%,14%)]" data-testid="section-servicios">
       <div className="max-w-7xl mx-auto px-6">
@@ -259,26 +270,52 @@ function ServicesSection() {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card 
-                className="group p-8 h-full bg-card border-card-border cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out"
-                data-testid={`card-service-${index}`}
+          {services.map((service, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 transition-all duration-[250ms] ease-in-out group-hover:bg-primary/15 group-hover:scale-105">
-                  <service.icon className="w-6 h-6 text-primary transition-colors duration-[250ms] ease-in-out" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-[250ms] ease-in-out group-hover:text-primary">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed transition-colors duration-[250ms] ease-in-out">{service.description}</p>
-              </Card>
-            </motion.div>
-          ))}
+                <Card 
+                  className={`group p-8 h-full bg-card border-card-border cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out ${isOpen ? 'border-primary/40 shadow-[0_0_15px_rgba(59,130,246,0.06)]' : ''}`}
+                  data-testid={`card-service-${index}`}
+                  onClick={() => toggleCard(index)}
+                >
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center transition-all duration-[250ms] ease-in-out group-hover:bg-primary/15 group-hover:scale-105">
+                      <service.icon className="w-6 h-6 text-primary transition-colors duration-[250ms] ease-in-out" />
+                    </div>
+                    <motion.div
+                      animate={{ rotate: isOpen ? 45 : 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="text-muted-foreground group-hover:text-primary transition-colors duration-[250ms] ease-in-out mt-1"
+                    >
+                      <Plus className="w-5 h-5" />
+                    </motion.div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-[250ms] ease-in-out group-hover:text-primary">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed transition-colors duration-[250ms] ease-in-out">{service.description}</p>
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <p className="text-muted-foreground/80 leading-relaxed mt-4 pt-4 border-t border-border/50 text-sm">{service.details}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
