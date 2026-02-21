@@ -167,7 +167,7 @@ function HeroSection() {
         animate="animate"
         variants={staggerContainer}
       >
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-3">
           <motion.div 
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm overflow-hidden relative"
             variants={fadeInUp}
