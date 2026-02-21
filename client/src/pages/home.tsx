@@ -168,7 +168,7 @@ function HeroSection() {
         variants={staggerContainer}
       >
         <motion.div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm overflow-hidden relative mb-3"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/25 backdrop-blur-sm overflow-hidden relative mb-3"
           variants={fadeInUp}
           data-testid="badge-hero"
         >
