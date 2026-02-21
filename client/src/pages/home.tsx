@@ -149,13 +149,14 @@ function HeroSection() {
         </motion.div>
         
         <motion.h1 
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight leading-tight drop-shadow-lg"
+          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] drop-shadow-lg"
           variants={fadeInUp}
           data-testid="text-hero-title"
+          style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
         >
-          Potenciamos
+          <span className="font-extrabold tracking-tight">Potenciamos</span>
           <br />
-          <span className="text-primary">tu negocio digital</span>
+          <span className="text-primary font-light italic tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>tu negocio digital</span>
         </motion.h1>
         
         <motion.p 
