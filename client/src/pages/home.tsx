@@ -170,9 +170,9 @@ function HeroSection() {
           data-testid="text-hero-title"
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
         >
-          <span className="font-extrabold tracking-[-0.02em]" style={{ fontFamily: "'Outfit', sans-serif" }}>Creamos</span>
+          <span className="font-medium tracking-[-0.02em]">Creamos</span>
           <br />
-          <span className="text-primary font-light italic tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>tu presencia digital</span>
+          <span className="text-primary font-extrabold tracking-[-0.02em]">tu presencia digital</span>
         </motion.h1>
         
         <motion.p 
