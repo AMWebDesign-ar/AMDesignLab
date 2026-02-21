@@ -272,6 +272,7 @@ function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => {
             const isOpen = openIndex === index;
+            const isDimmed = openIndex !== null && openIndex !== index;
             return (
               <motion.div
                 key={service.title}
@@ -279,6 +280,7 @@ function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                style={{ opacity: isDimmed ? 0.9 : 1, transition: 'opacity 0.25s ease-in-out' }}
               >
                 <Card 
                   className={`group p-8 h-full bg-card border-card-border cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out ${isOpen ? 'border-primary/40 shadow-[0_0_15px_rgba(59,130,246,0.06)] bg-[hsl(220,8%,16%)]' : ''}`}
