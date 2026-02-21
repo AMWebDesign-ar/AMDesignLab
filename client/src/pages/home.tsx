@@ -262,7 +262,7 @@ const benefits = [
   },
   {
     title: "Comunicación excepcional",
-    description: "Estamos siempre disponibles. Respuestas claras, rápidas y sin vueltas en cada etapa del proyecto."
+    description: "Estamos siempre disponibles. Respuestas claras, rápidas y directas en cada etapa del proyecto."
   },
   {
     title: "Resultados que se notan",
