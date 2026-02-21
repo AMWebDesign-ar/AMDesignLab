@@ -7,6 +7,7 @@ import {
   Code2, 
   Search, 
   Zap, 
+  Share2,
   CheckCircle2, 
   MessageCircle, 
   Mail,
@@ -206,6 +207,11 @@ const services = [
     icon: Zap,
     title: "Automatización",
     description: "Automatizamos procesos repetitivos para que tu negocio funcione de manera más eficiente. Ahorrá tiempo y recursos con soluciones inteligentes."
+  },
+  {
+    icon: Share2,
+    title: "Contenido para Redes",
+    description: "Creamos contenido atractivo y estratégico para tus redes sociales. Publicaciones que conectan con tu audiencia y potencian tu marca."
   }
 ];
 
@@ -228,7 +234,7 @@ function ServicesSection() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
