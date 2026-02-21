@@ -167,24 +167,8 @@ function HeroSection() {
         animate="animate"
         variants={staggerContainer}
       >
-        <motion.div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm mb-2 overflow-hidden relative"
-          variants={fadeInUp}
-          data-testid="badge-hero"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-          <span className="text-base text-foreground/90 relative z-10">✦ Proyectos para marcas y emprendedores en Argentina</span>
-        </motion.div>
-        <motion.div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm mb-8 overflow-hidden relative"
-          variants={fadeInUp}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-          <span className="text-base text-foreground/90 relative z-10">✦ Webs para vender desde el primer día</span>
-        </motion.div>
-        
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)]"
+          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-3 leading-[1.1] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)]"
           variants={fadeInUp}
           data-testid="text-hero-title"
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
@@ -193,6 +177,23 @@ function HeroSection() {
           <br />
           y posicionar
         </motion.h1>
+        <div className="flex flex-col items-center gap-2 mb-6">
+          <motion.div 
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm overflow-hidden relative"
+            variants={fadeInUp}
+            data-testid="badge-hero"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+            <span className="text-base text-foreground/90 relative z-10">✦ Proyectos para marcas y emprendedores en Argentina</span>
+          </motion.div>
+          <motion.div 
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm overflow-hidden relative"
+            variants={fadeInUp}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+            <span className="text-base text-foreground/90 relative z-10">✦ Webs para vender desde el primer día</span>
+          </motion.div>
+        </div>
         
         <motion.p 
           className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mt-2 mb-10 drop-shadow-md"
