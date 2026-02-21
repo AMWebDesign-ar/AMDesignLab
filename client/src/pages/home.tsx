@@ -263,8 +263,8 @@ function ServicesSection() {
 
 const benefits = [
   {
-    title: "Entendemos lo que necesitás",
-    description: "Sabemos lo que un cliente busca. Escuchamos tu idea y la transformamos en una solución real para tu negocio."
+    title: "Proyectos 100% a medida",
+    description: "Nos reunimos con vos para entender lo que buscás y necesitás. Cada proyecto se construye desde cero, adaptado a tus objetivos."
   },
   {
     title: "Comunicación excepcional",
