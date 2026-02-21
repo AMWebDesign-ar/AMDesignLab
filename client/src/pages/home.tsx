@@ -283,11 +283,23 @@ function ServicesSection() {
                 style={{ opacity: isDimmed ? 0.9 : 1, transition: 'opacity 0.25s ease-in-out' }}
               >
                 <Card 
-                  className={`group p-8 h-full bg-card border-card-border cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out ${isOpen ? 'border-primary/40 shadow-[0_0_15px_rgba(59,130,246,0.06)] bg-[hsl(220,8%,16%)]' : ''}`}
+                  className={`group p-8 h-full bg-card border-card-border cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out relative overflow-hidden ${isOpen ? 'border-primary/40 shadow-[0_0_15px_rgba(59,130,246,0.06)] bg-[hsl(220,8%,16%)]' : ''}`}
                   data-testid={`card-service-${index}`}
                   onClick={() => toggleCard(index)}
                 >
-                  <div className="flex items-start justify-between mb-6">
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute inset-0 pointer-events-none"
+                        style={{ background: 'radial-gradient(circle at 50% 40%, rgba(59,130,246,0.06) 0%, transparent 70%)' }}
+                      />
+                    )}
+                  </AnimatePresence>
+                  <div className="flex items-start justify-between mb-6 relative">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center transition-all duration-[250ms] ease-in-out group-hover:bg-primary/15 group-hover:scale-105">
                       <service.icon className="w-6 h-6 text-primary transition-colors duration-[250ms] ease-in-out" />
                     </div>
