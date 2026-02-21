@@ -178,7 +178,7 @@ function HeroSection() {
           variants={fadeInUp}
           data-testid="text-hero-subtitle"
         >
-          Diseño, SEO y automatización para hacer crecer tu negocio
+          Diseño, SEO y automatización para crecer
         </motion.p>
         
         <motion.div 
