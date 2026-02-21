@@ -10,6 +10,7 @@ import {
   CheckCircle2, 
   MessageCircle, 
   Mail,
+  Phone,
   ArrowRight,
   ArrowUp,
   Menu,
@@ -20,6 +21,7 @@ import logoImage from "@assets/3f8056a9-1bc4-499f-aaf6-703a3d27b814_176800549028
 
 const WHATSAPP_LINK = "https://wa.me/542236663939";
 const EMAIL = "contacto.amdigital@gmail.com";
+const PHONE = "+54 9 2236 66-3939";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -345,7 +347,17 @@ function ContactSection() {
             Contanos sobre tu proyecto y te ayudamos a encontrar la mejor solución para tu negocio.
           </p>
           
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Phone className="w-4 h-4" />
+              <a 
+                href={`tel:${PHONE.replace(/[\s-]/g, "")}`}
+                className="hover:text-foreground transition-colors"
+                data-testid="link-contact-phone"
+              >
+                {PHONE}
+              </a>
+            </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <MessageCircle className="w-4 h-4" />
               <a 
