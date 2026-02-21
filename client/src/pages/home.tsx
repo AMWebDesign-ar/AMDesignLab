@@ -344,7 +344,7 @@ function ContactSection() {
             ¿Listo para empezar?
           </h2>
           <p className="text-muted-foreground text-lg mb-8" data-testid="text-contacto-subtitle">
-            Contanos sobre tu proyecto y te ayudamos a encontrar la mejor solución para tu negocio.
+            Contanos sobre tu proyecto y te encontramos la mejor solución para tu negocio.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
