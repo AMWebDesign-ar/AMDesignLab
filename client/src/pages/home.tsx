@@ -319,10 +319,18 @@ function ServicesSection() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25, ease: "easeInOut" }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="text-muted-foreground/80 leading-relaxed mt-4 pt-4 border-t border-border/50 text-sm">{service.details}</p>
+                        <motion.p
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 8 }}
+                          transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
+                          className="text-muted-foreground/80 leading-relaxed mt-4 pt-4 border-t border-border/50 text-sm"
+                        >
+                          {service.details}
+                        </motion.p>
                       </motion.div>
                     )}
                   </AnimatePresence>
