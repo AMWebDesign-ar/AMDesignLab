@@ -241,7 +241,7 @@ const services = [
 
 function ServicesSection() {
   return (
-    <section id="servicios" className="py-20 md:py-32 relative" data-testid="section-servicios">
+    <section id="servicios" className="py-20 md:py-32 relative bg-[hsl(220,8%,14%)]" data-testid="section-servicios">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
