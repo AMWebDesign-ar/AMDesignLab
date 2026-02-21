@@ -70,7 +70,7 @@ function Header() {
           />
           <span className="font-semibold text-foreground tracking-tight">AM Web Studio</span>
         </a>
-        <nav className="hidden md:flex items-center gap-6" data-testid="nav-main">
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6" data-testid="nav-main">
           {navLinks.map((link) => (
             <a 
               key={link.href}
@@ -81,6 +81,8 @@ function Header() {
               {link.label}
             </a>
           ))}
+        </nav>
+        <div className="hidden md:flex items-center gap-3">
           <a 
             href="#contacto"
             className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group"
@@ -90,8 +92,6 @@ function Header() {
             <span className="absolute inset-[2px] rounded-full bg-background/90 group-hover:bg-background/70 transition-colors" />
             <span className="relative">HABLEMOS</span>
           </a>
-        </nav>
-        <div className="flex items-center gap-2">
           <ThemeToggle />
           <Button
             variant="ghost"
