@@ -381,7 +381,7 @@ function ContactSection() {
                   className="hover:text-foreground transition-colors"
                   data-testid="link-contact-phone"
                 >
-                  {PHONE}
+                  Teléfono
                 </a>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
