@@ -187,7 +187,7 @@ function HeroSection() {
         >
           <Button asChild variant="outline" size="sm" className="text-xs px-4 backdrop-blur-sm bg-background/20" data-testid="button-hero-servicios">
             <a href="#servicios">
-              Ver servicios
+              Empezar proyecto
               <ArrowRight className="w-4 h-4 ml-2" />
             </a>
           </Button>
