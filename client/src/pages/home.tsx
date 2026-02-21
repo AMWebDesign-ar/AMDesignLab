@@ -268,7 +268,7 @@ function ServicesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card 
-                className="p-8 h-full bg-card border-card-border hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-[250ms] ease-in-out"
+                className="p-8 h-full bg-card border-card-border hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out"
                 data-testid={`card-service-${index}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
