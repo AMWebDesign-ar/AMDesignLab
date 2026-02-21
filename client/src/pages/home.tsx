@@ -187,7 +187,7 @@ function HeroSection() {
         </motion.h1>
         
         <motion.p 
-          className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mt-2 mb-10 drop-shadow-md"
+          className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mt-3 mb-10 drop-shadow-md"
           variants={fadeInUp}
           data-testid="text-hero-subtitle"
         >
