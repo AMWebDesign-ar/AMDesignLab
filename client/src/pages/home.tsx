@@ -187,12 +187,18 @@ function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
           variants={fadeInUp}
         >
-          <Button asChild variant="outline" size="sm" className="text-xs px-4 backdrop-blur-sm bg-background/20" data-testid="button-hero-servicios">
-            <a href="#servicios">
+          <a 
+            href="#servicios"
+            className="relative inline-flex items-center px-8 py-3 text-sm font-semibold text-white rounded-full overflow-hidden group"
+            data-testid="button-hero-servicios"
+          >
+            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
+            <span className="absolute inset-[2px] rounded-full bg-background/90 group-hover:bg-background/70 transition-colors" />
+            <span className="relative flex items-center gap-2">
               Empezar proyecto
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
-          </Button>
+              <ArrowRight className="w-4 h-4" />
+            </span>
+          </a>
         </motion.div>
       </motion.div>
     </section>
