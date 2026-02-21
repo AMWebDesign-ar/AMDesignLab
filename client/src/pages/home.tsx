@@ -23,6 +23,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { SiWhatsapp } from "react-icons/si";
 import heroImage from "@assets/generated_images/dark_tech_workspace_hero.png";
 import logoImage from "@assets/3f8056a9-1bc4-499f-aaf6-703a3d27b814_1768005490289.png";
 
@@ -564,7 +565,7 @@ function FloatingButtons() {
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <MessageCircle className="w-8 h-8 text-white" />
+        <SiWhatsapp className="w-8 h-8 text-white" />
       </motion.a>
     </div>
   );
