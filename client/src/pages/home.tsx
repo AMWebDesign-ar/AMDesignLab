@@ -257,20 +257,20 @@ function ServicesSection() {
 
 const benefits = [
   {
-    title: "Soluciones a medida",
-    description: "Cada proyecto es único. Diseñamos estrategias personalizadas según tus objetivos."
+    title: "Entendemos lo que necesitás",
+    description: "Sabemos lo que un cliente busca. Escuchamos tu idea y la transformamos en una solución real para tu negocio."
   },
   {
-    title: "Enfoque en resultados",
-    description: "Nos enfocamos en métricas reales que impactan en el crecimiento de tu negocio."
+    title: "Comunicación excepcional",
+    description: "Estamos siempre disponibles. Respuestas claras, rápidas y sin vueltas en cada etapa del proyecto."
   },
   {
-    title: "Comunicación directa",
-    description: "Atención personalizada y respuestas rápidas. Sin intermediarios ni demoras."
+    title: "Resultados que se notan",
+    description: "No prometemos, cumplimos. Cada proyecto se mide por el impacto real que genera en tu negocio."
   },
   {
-    title: "Soporte continuo",
-    description: "Te acompañamos después del lanzamiento con mantenimiento y actualizaciones."
+    title: "Acompañamiento continuo",
+    description: "No te dejamos solo después del lanzamiento. Soporte, mejoras y seguimiento constante."
   }
 ];
 
