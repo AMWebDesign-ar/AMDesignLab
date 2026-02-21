@@ -365,7 +365,7 @@ const benefits = [
 
 function WhyChooseUsSection() {
   return (
-    <section id="nosotros" className="py-20 md:py-32 bg-card/50 relative" data-testid="section-nosotros">
+    <section id="nosotros" className="py-20 md:py-32 bg-[hsl(220,6%,11%)] relative" data-testid="section-nosotros">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div 
@@ -437,7 +437,7 @@ function ContactSection() {
   };
 
   return (
-    <section id="contacto" className="py-20 md:py-32 relative" data-testid="section-contacto">
+    <section id="contacto" className="py-20 md:py-32 relative bg-[hsl(220,8%,15%)]" data-testid="section-contacto">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start max-w-5xl mx-auto">
@@ -557,7 +557,7 @@ function ContactSection() {
 
 function Footer() {
   return (
-    <footer className="py-12 border-t border-border" data-testid="footer">
+    <footer className="py-12 border-t border-border bg-[hsl(220,6%,9%)]" data-testid="footer">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-2">
