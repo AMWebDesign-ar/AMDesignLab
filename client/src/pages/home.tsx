@@ -337,10 +337,6 @@ function ContactSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-contacto-title">
             Hagamos crecer tu negocio
           </h2>
-          <p className="text-muted-foreground text-lg mb-8" data-testid="text-contacto-subtitle">
-            Escribinos y empezamos a trabajar juntos en tu próximo proyecto.
-          </p>
-          
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <div className="flex items-center gap-2 text-muted-foreground">
               <Phone className="w-4 h-4" />
