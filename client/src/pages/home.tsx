@@ -537,7 +537,7 @@ function FloatingButtons() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.div
-            className="fixed bottom-6 left-6 z-50"
+            className="fixed bottom-24 right-6 z-50"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 0.6 }}
             exit={{ opacity: 0, y: 10 }}
