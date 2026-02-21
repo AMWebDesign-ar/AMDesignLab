@@ -184,14 +184,14 @@ function HeroSection() {
             data-testid="badge-hero"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-            <span className="text-base text-foreground/90 relative z-10">✦ Proyectos para marcas y emprendedores en Argentina</span>
+            <span className="text-[1.05rem] text-foreground/90 relative z-10">✦ Proyectos para marcas y emprendedores en Argentina</span>
           </motion.div>
           <motion.div 
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm overflow-hidden relative"
             variants={fadeInUp}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-            <span className="text-base text-foreground/90 relative z-10">✦ Webs para vender desde el primer día</span>
+            <span className="text-[1.05rem] text-foreground/90 relative z-10">✦ Webs para vender desde el primer día</span>
           </motion.div>
         </div>
         
