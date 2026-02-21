@@ -145,7 +145,7 @@ function HeroSection() {
           data-testid="badge-hero"
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-sm text-foreground/90">Desarrollo y diseño web profesional</span>
+          <span className="text-base text-foreground/90">Desarrollo y diseño web profesional</span>
         </motion.div>
         
         <motion.h1 
