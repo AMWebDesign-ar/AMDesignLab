@@ -90,7 +90,7 @@ function Header() {
         <div className="hidden md:flex items-center gap-3">
           <a 
             href="#contacto"
-            className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group"
+            className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group shadow-[0_0_20px_rgba(59,130,246,0.35)]"
             data-testid="link-hablemos"
           >
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
