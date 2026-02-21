@@ -167,17 +167,7 @@ function HeroSection() {
         animate="animate"
         variants={staggerContainer}
       >
-        <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-3 leading-[1.1] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)]"
-          variants={fadeInUp}
-          data-testid="text-hero-title"
-          style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-        >
-          <span className="text-primary font-extrabold tracking-[-0.02em]">Tu</span> web lista para vender
-          <br />
-          y posicionar
-        </motion.h1>
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
           <motion.div 
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm overflow-hidden relative"
             variants={fadeInUp}
@@ -194,6 +184,16 @@ function HeroSection() {
             <span className="text-[1.05rem] text-foreground/90 relative z-10">✦ Webs para vender desde el primer día</span>
           </motion.div>
         </div>
+        <motion.h1 
+          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)]"
+          variants={fadeInUp}
+          data-testid="text-hero-title"
+          style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+        >
+          <span className="text-primary font-extrabold tracking-[-0.02em]">Tu</span> web lista para vender
+          <br />
+          y posicionar
+        </motion.h1>
         
         <motion.p 
           className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mt-2 mb-10 drop-shadow-md"
