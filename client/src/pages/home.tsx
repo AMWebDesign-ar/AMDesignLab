@@ -71,16 +71,21 @@ function Header() {
           <span className="font-semibold text-foreground tracking-tight">AM Web Studio</span>
         </a>
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6" data-testid="nav-main">
-          {navLinks.map((link) => (
-            <a 
-              key={link.href}
-              href={link.href} 
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              data-testid={`link-${link.label.toLowerCase()}`}
-            >
-              {link.label}
-            </a>
-          ))}
+          <a 
+            href="#servicios"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            data-testid="link-servicios"
+          >
+            Servicios
+          </a>
+          <span className="w-px h-4 bg-border/60" />
+          <a 
+            href="#nosotros"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            data-testid="link-nosotros"
+          >
+            Nosotros
+          </a>
         </nav>
         <div className="hidden md:flex items-center gap-3">
           <a 
