@@ -170,9 +170,9 @@ function HeroSection() {
           data-testid="text-hero-title"
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
         >
-          <span className="font-medium tracking-[-0.02em]">Creamos</span>
+          <span className="text-primary font-extrabold tracking-[-0.02em]">TU</span> web lista para
           <br />
-          <span className="text-primary font-extrabold tracking-[-0.02em]">tu presencia digital</span>
+          vender, posicionar y crecer
         </motion.h1>
         
         <motion.p 
