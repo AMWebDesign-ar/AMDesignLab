@@ -320,7 +320,7 @@ function WhyChooseUsSection() {
             Por qué elegirnos
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto" data-testid="text-nosotros-subtitle">
-            Comprometidos con el éxito de tu negocio
+            Comprometidos con tu éxito
           </p>
         </motion.div>
         
