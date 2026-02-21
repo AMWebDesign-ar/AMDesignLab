@@ -345,24 +345,29 @@ function ContactSection() {
             Contanos sobre tu proyecto y te ayudamos a encontrar la mejor solución para tu negocio.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <Button asChild size="sm" className="text-xs px-4 w-full sm:w-auto justify-center text-center" data-testid="button-contact-whatsapp">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
-                Consultá por WhatsApp
+          <div className="flex items-center justify-center gap-6">
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <MessageCircle className="w-4 h-4" />
+              <a 
+                href={WHATSAPP_LINK} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition-colors"
+                data-testid="link-contact-whatsapp"
+              >
+                WhatsApp
               </a>
-            </Button>
-          </div>
-          
-          <div className="flex items-center justify-center gap-2 text-muted-foreground">
-            <Mail className="w-4 h-4" />
-            <a 
-              href={`mailto:${EMAIL}`} 
-              className="hover:text-foreground transition-colors"
-              data-testid="link-email"
-            >
-              {EMAIL}
-            </a>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Mail className="w-4 h-4" />
+              <a 
+                href={`mailto:${EMAIL}`} 
+                className="hover:text-foreground transition-colors"
+                data-testid="link-email"
+              >
+                {EMAIL}
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>
