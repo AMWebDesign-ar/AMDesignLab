@@ -176,7 +176,7 @@ function HeroSection() {
           <span className="text-[1.05rem] text-foreground/90 relative z-10">✦ Proyectos para marcas y emprendedores en Argentina</span>
         </motion.div>
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)]"
+          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto"
           variants={fadeInUp}
           data-testid="text-hero-title"
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
