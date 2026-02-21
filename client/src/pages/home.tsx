@@ -459,16 +459,18 @@ function FloatingButtons() {
           </motion.div>
         )}
       </AnimatePresence>
-      <a
+      <motion.a
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20BA5C] transition-colors flex items-center justify-center shadow-lg"
+        className="w-16 h-16 rounded-full bg-[#25D366] hover:bg-[#20BA5C] transition-colors flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.5)] hover:shadow-[0_4px_30px_rgba(37,211,102,0.7)]"
         aria-label="Contactar por WhatsApp"
         data-testid="button-floating-whatsapp"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <MessageCircle className="w-7 h-7 text-white" />
-      </a>
+        <MessageCircle className="w-8 h-8 text-white" />
+      </motion.a>
     </div>
   );
 }
