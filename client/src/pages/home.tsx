@@ -268,14 +268,14 @@ function ServicesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card 
-                className="p-8 h-full bg-card border-card-border hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out"
+                className="group p-8 h-full bg-card border-card-border cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out"
                 data-testid={`card-service-${index}`}
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                  <service.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 transition-all duration-[250ms] ease-in-out group-hover:bg-primary/15 group-hover:scale-105">
+                  <service.icon className="w-6 h-6 text-primary transition-colors duration-[250ms] ease-in-out" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-[250ms] ease-in-out group-hover:text-primary">{service.title}</h3>
+                <p className="text-muted-foreground leading-relaxed transition-colors duration-[250ms] ease-in-out">{service.description}</p>
               </Card>
             </motion.div>
           ))}
