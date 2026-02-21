@@ -15,8 +15,14 @@ import {
   ArrowRight,
   ArrowUp,
   Menu,
-  X
+  X,
+  Send,
+  Loader2
 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
 import heroImage from "@assets/generated_images/dark_tech_workspace_hero.png";
 import logoImage from "@assets/3f8056a9-1bc4-499f-aaf6-703a3d27b814_1768005490289.png";
 
@@ -329,55 +335,144 @@ function WhyChooseUsSection() {
 }
 
 function ContactSection() {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({ nombreApellido: "", telefono: "", consulta: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.nombreApellido || !formData.telefono || !formData.consulta) {
+      toast({ title: "Completá todos los campos", variant: "destructive" });
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      await apiRequest("POST", "/api/contact", formData);
+      setSubmitted(true);
+      setFormData({ nombreApellido: "", telefono: "", consulta: "" });
+      toast({ title: "¡Mensaje enviado!", description: "Nos pondremos en contacto pronto." });
+    } catch {
+      toast({ title: "Error al enviar", description: "Intentá de nuevo más tarde.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contacto" className="py-20 md:py-32 relative" data-testid="section-contacto">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div 
-          className="text-center max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-contacto-title">
-            Hagamos crecer tu marca
-          </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Phone className="w-4 h-4" />
-              <a 
-                href={`tel:${PHONE.replace(/[\s-]/g, "")}`}
-                className="hover:text-foreground transition-colors"
-                data-testid="link-contact-phone"
-              >
-                {PHONE}
-              </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start max-w-5xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight" data-testid="text-contacto-title">
+              Hagamos crecer tu marca
+            </h2>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Phone className="w-5 h-5 text-primary" />
+                <a 
+                  href={`tel:${PHONE.replace(/[\s-]/g, "")}`}
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-contact-phone"
+                >
+                  {PHONE}
+                </a>
+              </div>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <MessageCircle className="w-5 h-5 text-primary" />
+                <a 
+                  href={WHATSAPP_LINK} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-contact-whatsapp"
+                >
+                  WhatsApp
+                </a>
+              </div>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Mail className="w-5 h-5 text-primary" />
+                <a 
+                  href={`mailto:${EMAIL}`} 
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-email"
+                >
+                  {EMAIL}
+                </a>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <MessageCircle className="w-4 h-4" />
-              <a 
-                href={WHATSAPP_LINK} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-foreground transition-colors"
-                data-testid="link-contact-whatsapp"
-              >
-                WhatsApp
-              </a>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Mail className="w-4 h-4" />
-              <a 
-                href={`mailto:${EMAIL}`} 
-                className="hover:text-foreground transition-colors"
-                data-testid="link-email"
-              >
-                {EMAIL}
-              </a>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {submitted ? (
+              <div className="text-center py-12" data-testid="contact-success">
+                <CheckCircle2 className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-foreground mb-2">¡Gracias por tu consulta!</h3>
+                <p className="text-muted-foreground">Nos pondremos en contacto a la brevedad.</p>
+                <Button 
+                  variant="outline" 
+                  className="mt-6"
+                  onClick={() => setSubmitted(false)}
+                  data-testid="button-new-message"
+                >
+                  Enviar otra consulta
+                </Button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4" data-testid="form-contact">
+                <div>
+                  <Input
+                    placeholder="Nombre y apellido"
+                    value={formData.nombreApellido}
+                    onChange={(e) => setFormData({ ...formData, nombreApellido: e.target.value })}
+                    data-testid="input-nombre"
+                  />
+                </div>
+                <div>
+                  <Input
+                    placeholder="Teléfono de contacto"
+                    value={formData.telefono}
+                    onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
+                    data-testid="input-telefono"
+                  />
+                </div>
+                <div>
+                  <Textarea
+                    placeholder="Tu consulta"
+                    value={formData.consulta}
+                    onChange={(e) => setFormData({ ...formData, consulta: e.target.value })}
+                    rows={4}
+                    data-testid="input-consulta"
+                  />
+                </div>
+                <Button 
+                  type="submit" 
+                  className="w-full" 
+                  disabled={isSubmitting}
+                  data-testid="button-submit-contact"
+                >
+                  {isSubmitting ? (
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  ) : (
+                    <Send className="w-4 h-4 mr-2" />
+                  )}
+                  {isSubmitting ? "Enviando..." : "Enviar consulta"}
+                </Button>
+              </form>
+            )}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
