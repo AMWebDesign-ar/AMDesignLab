@@ -83,10 +83,12 @@ function Header() {
           ))}
           <a 
             href="#contacto"
-            className="text-sm font-semibold px-5 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="relative inline-flex items-center px-6 py-2 text-xs font-semibold text-white rounded-full overflow-hidden group"
             data-testid="link-hablemos"
           >
-            HABLEMOS
+            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
+            <span className="absolute inset-[2px] rounded-full bg-background/90 group-hover:bg-background/70 transition-colors" />
+            <span className="relative">HABLEMOS</span>
           </a>
         </nav>
         <div className="flex items-center gap-2">
@@ -128,11 +130,13 @@ function Header() {
               ))}
               <a
                 href="#contacto"
-                className="text-center text-sm font-semibold px-5 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mt-2"
+                className="relative inline-flex items-center justify-center px-6 py-2 text-xs font-semibold text-white rounded-full overflow-hidden group mt-2"
                 onClick={handleNavClick}
                 data-testid="link-mobile-hablemos"
               >
-                HABLEMOS
+                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
+                <span className="absolute inset-[2px] rounded-full bg-background/90 group-hover:bg-background/70 transition-colors" />
+                <span className="relative">HABLEMOS</span>
               </a>
             </nav>
           </motion.div>
@@ -198,7 +202,7 @@ function HeroSection() {
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
             <span className="absolute inset-[2px] rounded-full bg-background/90 group-hover:bg-background/70 transition-colors" />
             <span className="relative flex items-center gap-2">
-              Empezar proyecto
+              EMPEZAR PROYECTO
               <ArrowRight className="w-4 h-4" />
             </span>
           </a>
