@@ -283,7 +283,7 @@ function ServicesSection() {
                 style={{ opacity: isDimmed ? 0.9 : 1, transition: 'opacity 0.25s ease-in-out', alignSelf: 'flex-end' }}
               >
                 <Card 
-                  className={`group p-8 min-h-[280px] bg-card border-card-border cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out relative overflow-hidden ${isOpen ? 'border-primary/40 shadow-[0_0_15px_rgba(59,130,246,0.06)] bg-[hsl(220,8%,16%)]' : ''}`}
+                  className={`group p-8 min-h-[280px] bg-card cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out relative overflow-hidden ${isOpen ? 'border-primary/40 shadow-[0_0_15px_rgba(59,130,246,0.06)] bg-[hsl(220,8%,16%)]' : ''} ${isDimmed ? 'border-card-border/40' : 'border-card-border'}`}
                   data-testid={`card-service-${index}`}
                   onClick={() => toggleCard(index)}
                 >
