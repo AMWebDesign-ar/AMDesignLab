@@ -153,9 +153,9 @@ function HeroSection() {
           variants={fadeInUp}
           data-testid="text-hero-title"
         >
-          Desarrollo de sitios web
+          Hacemos crecer
           <br />
-          <span className="text-primary">a medida</span>
+          <span className="text-primary">tu negocio digital</span>
         </motion.h1>
         
         <motion.p 
