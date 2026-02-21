@@ -176,13 +176,13 @@ function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
           variants={fadeInUp}
         >
-          <Button asChild size="default" className="text-sm px-6" data-testid="button-hero-whatsapp">
+          <Button asChild size="sm" className="text-xs px-4" data-testid="button-hero-whatsapp">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4 mr-2" />
+              <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
               Consultá por WhatsApp
             </a>
           </Button>
-          <Button asChild variant="outline" size="lg" className="text-base backdrop-blur-sm bg-background/20" data-testid="button-hero-servicios">
+          <Button asChild variant="outline" size="sm" className="text-xs px-4 backdrop-blur-sm bg-background/20" data-testid="button-hero-servicios">
             <a href="#servicios">
               Ver servicios
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -345,9 +345,9 @@ function ContactSection() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <Button asChild size="default" className="text-sm px-6 w-full sm:w-auto" data-testid="button-contact-whatsapp">
+            <Button asChild size="sm" className="text-xs px-4 w-full sm:w-auto" data-testid="button-contact-whatsapp">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-4 h-4 mr-2" />
+                <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
                 Consultá por WhatsApp
               </a>
             </Button>
