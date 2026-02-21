@@ -83,7 +83,7 @@ function Header() {
           ))}
           <a 
             href="#contacto"
-            className="relative inline-flex items-center px-6 py-2 text-xs font-semibold text-white rounded-full overflow-hidden group"
+            className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group"
             data-testid="link-hablemos"
           >
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
@@ -130,7 +130,7 @@ function Header() {
               ))}
               <a
                 href="#contacto"
-                className="relative inline-flex items-center justify-center px-6 py-2 text-xs font-semibold text-white rounded-full overflow-hidden group mt-2"
+                className="relative inline-flex items-center justify-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group mt-2"
                 onClick={handleNavClick}
                 data-testid="link-mobile-hablemos"
               >
@@ -196,7 +196,7 @@ function HeroSection() {
         >
           <a 
             href="#servicios"
-            className="relative inline-flex items-center px-8 py-3 text-sm font-semibold text-white rounded-full overflow-hidden group"
+            className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group"
             data-testid="button-hero-servicios"
           >
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
