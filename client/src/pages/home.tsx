@@ -52,7 +52,13 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50" data-testid="header">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         <a href="#inicio" className="flex items-center gap-2 hover:opacity-80 transition-opacity" data-testid="logo-brand">
-          <img src={logoImage} alt="AM Digital" className="w-10 h-10 rounded-full object-cover" />
+          <motion.img 
+            src={logoImage} 
+            alt="AM Digital" 
+            className="w-10 h-10 rounded-full object-cover"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          />
           <span className="font-semibold text-foreground tracking-tight">AM Web Studio</span>
         </a>
         <nav className="hidden md:flex items-center gap-6" data-testid="nav-main">
