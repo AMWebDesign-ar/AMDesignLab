@@ -173,7 +173,7 @@ function HeroSection() {
           data-testid="badge-hero"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-          <span className="text-base text-foreground/90 relative z-10">✦ Desarrollo y diseño web profesional · Proyectos para marcas y emprendedores en Argentina · Webs para vender desde el primer día</span>
+          <span className="text-base text-foreground/90 relative z-10">✦ Desarrollo y diseño web profesional ✦ Proyectos para marcas y emprendedores en Argentina ✦ Webs para vender desde el primer día</span>
         </motion.div>
         
         <motion.h1 
