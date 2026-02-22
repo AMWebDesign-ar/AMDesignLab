@@ -290,18 +290,18 @@ function ServicesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          initial={{ opacity: 0, y: 50, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1, ease: [0.12, 0.8, 0.2, 1] }}
         >
           <motion.h2 
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" 
             data-testid="text-servicios-title"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 25, scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+            transition={{ duration: 0.9, delay: 0.1, ease: [0.12, 0.8, 0.2, 1] }}
           >
             Nuestros servicios
             <div className="w-8 h-[2px] bg-gradient-to-r from-[rgba(59,130,246,0.7)] to-[rgba(59,130,246,0.1)] rounded-full mt-2.5 mx-auto" />
@@ -309,10 +309,10 @@ function ServicesSection() {
           <motion.p 
             className="text-muted-foreground text-lg max-w-2xl mx-auto" 
             data-testid="text-servicios-subtitle"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
+            transition={{ duration: 0.85, delay: 0.3, ease: [0.12, 0.8, 0.2, 1] }}
           >
             Soluciones digitales integrales para impulsar tu presencia online
           </motion.p>
@@ -325,10 +325,10 @@ function ServicesSection() {
             return (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-30px" }}
-                transition={{ duration: 0.6, delay: 0.1 + index * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
+                initial={{ opacity: 0, y: 50, scale: 0.92, filter: "blur(5px)" }}
+                whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.9, delay: 0.15 + index * 0.15, ease: [0.12, 0.8, 0.2, 1] }}
                 style={{ opacity: isDimmed ? 0.93 : 1, transition: 'opacity 0.25s ease-in-out', alignSelf: 'flex-end' }}
               >
                 <Card 
@@ -419,18 +419,18 @@ function WhyChooseUsSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+            initial={{ opacity: 0, y: 50, filter: "blur(6px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 1, ease: [0.12, 0.8, 0.2, 1] }}
           >
             <motion.h2 
               className="text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight" 
               data-testid="text-nosotros-title"
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 25, scale: 0.97 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              transition={{ duration: 0.9, delay: 0.1, ease: [0.12, 0.8, 0.2, 1] }}
             >
               Por qué elegirnos
               <div className="w-8 h-[2px] bg-gradient-to-r from-[rgba(59,130,246,0.7)] to-[rgba(59,130,246,0.1)] rounded-full mt-2.5" />
@@ -438,19 +438,19 @@ function WhyChooseUsSection() {
             <motion.p 
               className="text-muted-foreground text-lg mb-2" 
               data-testid="text-nosotros-subtitle"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
+              transition={{ duration: 0.85, delay: 0.25, ease: [0.12, 0.8, 0.2, 1] }}
             >
               Comprometidos con tu éxito
             </motion.p>
             <motion.p 
               className="text-muted-foreground/70 text-sm leading-relaxed max-w-sm"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 15, filter: "blur(3px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.35, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.4, ease: [0.12, 0.8, 0.2, 1] }}
             >
               Trabajamos codo a codo con cada cliente para entregar soluciones digitales que realmente generan resultados.
             </motion.p>
@@ -460,20 +460,20 @@ function WhyChooseUsSection() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                className="flex gap-4 p-5 rounded-xl bg-background/40 backdrop-blur-md border border-white/[0.07] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04),0_4px_24px_rgba(0,0,0,0.12)] hover:border-primary/30 hover:translate-y-[-2px] hover:bg-background/50 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_8px_32px_rgba(0,0,0,0.18)] transition-all duration-[250ms] ease-in-out w-full cursor-default"
-                initial={{ opacity: 0, y: 25, scale: 0.97 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-30px" }}
-                transition={{ duration: 0.5, delay: 0.15 + index * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
+                className="flex gap-4 p-5 rounded-xl bg-background/40 backdrop-blur-md border border-white/[0.07] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04),0_4px_24px_rgba(0,0,0,0.12)] hover:border-primary/30 hover:translate-y-[-2px] hover:bg-background/50 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_8px_32px_rgba(0,0,0,0.18),0_0_16px_rgba(59,130,246,0.06)] transition-all duration-500 ease-out w-full cursor-default"
+                initial={{ opacity: 0, x: 60, scale: 0.93, filter: "blur(5px)" }}
+                whileInView={{ opacity: 1, x: 0, scale: 1, filter: "blur(0px)" }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.9, delay: 0.2 + index * 0.15, ease: [0.12, 0.8, 0.2, 1] }}
                 data-testid={`benefit-${index}`}
               >
                 <div className="flex-shrink-0">
                   <motion.div 
                     className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center"
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
+                    initial={{ scale: 0.3, opacity: 0, rotate: -30 }}
+                    whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.3 + index * 0.12, type: "spring", stiffness: 200 }}
+                    transition={{ duration: 0.7, delay: 0.35 + index * 0.15, type: "spring", stiffness: 130, damping: 12 }}
                   >
                     <CheckCircle2 className="w-5 h-5 text-primary" />
                   </motion.div>
@@ -522,18 +522,18 @@ function ContactSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start max-w-5xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+            initial={{ opacity: 0, y: 50, filter: "blur(6px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 1, ease: [0.12, 0.8, 0.2, 1] }}
           >
             <motion.h2 
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 tracking-tight" 
               data-testid="text-contacto-title"
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 25, scale: 0.97 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              transition={{ duration: 0.9, delay: 0.1, ease: [0.12, 0.8, 0.2, 1] }}
             >
               Hablemos de tu proyecto
               <div className="w-8 h-[2px] bg-gradient-to-r from-[rgba(59,130,246,0.7)] to-[rgba(59,130,246,0.1)] rounded-full mt-2.5" />
@@ -572,10 +572,10 @@ function ContactSection() {
 
           <motion.div
             className="bg-background/40 backdrop-blur-md border border-white/[0.07] rounded-2xl p-8 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04),0_4px_24px_rgba(0,0,0,0.15)]"
-            initial={{ opacity: 0, y: 25, scale: 0.97 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            initial={{ opacity: 0, y: 50, scale: 0.93, filter: "blur(5px)" }}
+            whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.95, delay: 0.25, ease: [0.12, 0.8, 0.2, 1] }}
           >
             {submitted ? (
               <div className="text-center py-12" data-testid="contact-success">
@@ -649,17 +649,17 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="flex flex-col md:flex-row items-center justify-between gap-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-30px" }}
-          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.9, ease: [0.12, 0.8, 0.2, 1] }}
         >
           <motion.div 
             className="flex flex-col items-center md:items-start gap-2"
-            initial={{ opacity: 0, x: -15 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -30, filter: "blur(3px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            transition={{ duration: 0.85, delay: 0.15, ease: [0.12, 0.8, 0.2, 1] }}
           >
             <div className="flex items-center gap-2" data-testid="footer-brand">
               <motion.img 
@@ -676,10 +676,10 @@ function Footer() {
           
           <motion.div 
             className="flex flex-col items-center md:items-end gap-2"
-            initial={{ opacity: 0, x: 15 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 30, filter: "blur(3px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.85, delay: 0.25, ease: [0.12, 0.8, 0.2, 1] }}
           >
             <a 
               href={`mailto:${EMAIL}`} 
