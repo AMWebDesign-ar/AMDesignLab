@@ -197,7 +197,7 @@ function HeroSection() {
           variants={fadeInUp}
           data-testid="text-hero-subtitle"
         >
-          Diseño, estrategia y posicionamiento para tu marca
+          Diseño, posicionamiento y crecimiento digital para tu marca
         </motion.p>
         
         <motion.div 
