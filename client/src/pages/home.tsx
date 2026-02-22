@@ -128,24 +128,28 @@ function Header() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-background/95 backdrop-blur-md border-b border-border"
+            initial={{ opacity: 0, y: -10, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, y: 0, backdropFilter: "blur(16px)" }}
+            exit={{ opacity: 0, y: -10, backdropFilter: "blur(0px)" }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="md:hidden bg-[rgba(10,12,18,0.65)] border-b border-[rgba(59,130,246,0.15)] shadow-[0_8px_32px_rgba(0,0,0,0.3),0_0_20px_rgba(59,130,246,0.06)]"
             data-testid="mobile-menu"
           >
-            <nav className="flex flex-col px-6 py-4 gap-4">
-              {navLinks.map((link) => (
-                <a
+            <nav className="flex flex-col px-6 py-5 gap-1">
+              {navLinks.map((link, i) => (
+                <motion.a
                   key={link.href}
                   href={link.href}
-                  className="text-base text-muted-foreground hover:text-foreground transition-colors py-2"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                  className="text-base text-muted-foreground hover:text-white py-3 px-4 rounded-xl hover:bg-[rgba(59,130,246,0.08)] hover:shadow-[inset_0_0_12px_rgba(59,130,246,0.06),0_0_8px_rgba(59,130,246,0.04)] hover:[text-shadow:0_0_8px_rgba(59,130,246,0.3)] transition-all duration-300 border border-transparent hover:border-[rgba(59,130,246,0.12)]"
                   onClick={handleNavClick}
                   data-testid={`link-mobile-${link.label.toLowerCase()}`}
                 >
                   {link.label}
-                </a>
+                </motion.a>
               ))}
             </nav>
           </motion.div>
