@@ -710,7 +710,7 @@ function FloatingButtons() {
   return (
     <>
       <AnimatePresence>
-        {showScrollTop && (
+        {!showScrollTop && (
           <motion.a
             href="#contacto"
             className="md:hidden fixed top-[84px] right-6 z-40 inline-flex items-center px-4 py-1.5 text-[0.6rem] font-semibold text-white rounded-full border border-[rgba(59,130,246,0.5)] bg-[rgba(59,130,246,0.1)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_10px_rgba(59,130,246,0.5)] shadow-[0_0_14px_rgba(59,130,246,0.2),inset_0_0_10px_rgba(59,130,246,0.1)] hover:bg-[rgba(59,130,246,0.18)] hover:border-[rgba(59,130,246,0.7)] hover:shadow-[0_0_24px_rgba(59,130,246,0.35),inset_0_0_14px_rgba(59,130,246,0.15)] hover:[text-shadow:0_0_16px_rgba(59,130,246,0.7)] hover:scale-[1.08] active:scale-[0.97] transition-all duration-300 ease-in-out"
