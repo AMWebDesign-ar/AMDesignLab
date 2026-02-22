@@ -85,13 +85,7 @@ function Header() {
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
-          <motion.span 
-            className="text-[0.95rem] font-bold text-white tracking-[0.02em] [text-shadow:0_0_12px_rgba(59,130,246,0.25)] drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]" 
-            style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", WebkitFontSmoothing: "antialiased" }}
-            initial={{ opacity: 0, filter: "blur(18px)", scale: 1.08 }}
-            animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-            transition={{ duration: 2.2, ease: [0.05, 0.7, 0.1, 1], delay: 0.3 }}
-          >AM Web Design</motion.span>
+          <span className="text-[0.95rem] font-bold text-white tracking-[0.02em] [text-shadow:0_0_12px_rgba(59,130,246,0.25)] drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", WebkitFontSmoothing: "antialiased" }}>AM Web Design</span>
         </a>
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6" data-testid="nav-main">
           <a 
@@ -212,7 +206,9 @@ function HeroSection() {
         </motion.div>
         <motion.h1 
           className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto"
-          variants={fadeInUp}
+          initial={{ opacity: 0, filter: "blur(20px)", scale: 1.06 }}
+          animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
+          transition={{ duration: 2.5, ease: [0.05, 0.7, 0.1, 1], delay: 0.4 }}
           data-testid="text-hero-title"
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
         >
