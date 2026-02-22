@@ -116,6 +116,7 @@ function Header() {
             variant="ghost"
             size="icon"
             className="md:hidden"
+            onMouseEnter={() => setMobileMenuOpen(true)}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
             data-testid="button-mobile-menu"
@@ -133,6 +134,7 @@ function Header() {
             exit={{ opacity: 0, y: -10, backdropFilter: "blur(0px)" }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="md:hidden bg-[rgba(10,12,18,0.65)] border-b border-[rgba(59,130,246,0.15)] shadow-[0_8px_32px_rgba(0,0,0,0.3),0_0_20px_rgba(59,130,246,0.06)]"
+            onMouseLeave={() => setMobileMenuOpen(false)}
             data-testid="mobile-menu"
           >
             <nav className="flex flex-col px-6 py-5 gap-1">
