@@ -168,7 +168,7 @@ function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(59,130,246,0.08),transparent_70%)] blur-[60px] pointer-events-none" />
       
       <motion.div 
-        className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10"
+        className="max-w-7xl mx-auto px-6 py-20 pt-[calc(5rem+15px)] text-center relative z-10"
         initial="initial"
         animate="animate"
         variants={staggerContainer}
