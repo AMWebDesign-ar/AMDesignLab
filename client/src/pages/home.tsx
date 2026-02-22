@@ -160,7 +160,7 @@ function HeroSection() {
     <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20" data-testid="section-hero">
       <a 
         href="#contacto"
-        className="md:hidden fixed top-[68px] right-6 z-40 inline-flex items-center px-4 py-1.5 text-[0.6rem] font-semibold text-white rounded-full border border-[rgba(59,130,246,0.35)] bg-[rgba(59,130,246,0.07)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_8px_rgba(59,130,246,0.4)] shadow-[0_0_10px_rgba(59,130,246,0.12),inset_0_0_8px_rgba(59,130,246,0.06)] transition-all duration-300 ease-in-out"
+        className="md:hidden fixed top-[76px] right-6 z-40 inline-flex items-center px-4 py-1.5 text-[0.6rem] font-semibold text-white rounded-full border border-[rgba(59,130,246,0.35)] bg-[rgba(59,130,246,0.07)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_8px_rgba(59,130,246,0.4)] shadow-[0_0_10px_rgba(59,130,246,0.12),inset_0_0_8px_rgba(59,130,246,0.06)] transition-all duration-300 ease-in-out"
         data-testid="link-hablemos"
       >
         <span className="relative">HABLEMOS</span>
