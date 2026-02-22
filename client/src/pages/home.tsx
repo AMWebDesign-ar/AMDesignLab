@@ -33,15 +33,15 @@ const EMAIL = "contacto.amdigital@gmail.com";
 const PHONE = "5492236663939";
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
+  initial: { opacity: 0, y: 30, scale: 0.97 },
+  animate: { opacity: 1, y: 0, scale: 1 },
+  transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }
 };
 
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.15
     }
   }
 };
@@ -256,17 +256,31 @@ function ServicesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-servicios-title">
+          <motion.h2 
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" 
+            data-testid="text-servicios-title"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          >
             Nuestros servicios
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto" data-testid="text-servicios-subtitle">
+          </motion.h2>
+          <motion.p 
+            className="text-muted-foreground text-lg max-w-2xl mx-auto" 
+            data-testid="text-servicios-subtitle"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
+          >
             Soluciones digitales integrales para impulsar tu presencia online
-          </p>
+          </motion.p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-end">
@@ -276,10 +290,10 @@ function ServicesSection() {
             return (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.6, delay: 0.1 + index * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
                 style={{ opacity: isDimmed ? 0.93 : 1, transition: 'opacity 0.25s ease-in-out', alignSelf: 'flex-end' }}
               >
                 <Card 
@@ -472,55 +486,61 @@ function ContactSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start max-w-5xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 tracking-tight" data-testid="text-contacto-title">
+            <motion.h2 
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 tracking-tight" 
+              data-testid="text-contacto-title"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+            >
               Hablemos de tu proyecto
-            </h2>
+            </motion.h2>
             <div className="flex flex-col gap-4 mt-7">
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Phone className="w-5 h-5 text-primary" />
-                <a 
-                  href={`tel:${PHONE.replace(/[\s-]/g, "")}`}
-                  className="hover:text-foreground transition-colors"
-                  data-testid="link-contact-phone"
+              {[
+                { icon: Phone, href: `tel:${PHONE.replace(/[\s-]/g, "")}`, label: "Teléfono", testId: "link-contact-phone" },
+                { icon: MessageCircle, href: WHATSAPP_LINK, label: "WhatsApp", testId: "link-contact-whatsapp", external: true },
+                { icon: Mail, href: `mailto:${EMAIL}`, label: EMAIL, testId: "link-email" }
+              ].map((item, index) => (
+                <motion.div 
+                  key={item.testId}
+                  className="flex items-center gap-3 text-muted-foreground"
+                  initial={{ opacity: 0, x: -15 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.2 + index * 0.1, ease: "easeOut" }}
                 >
-                  Teléfono
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <MessageCircle className="w-5 h-5 text-primary" />
-                <a 
-                  href={WHATSAPP_LINK} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                  data-testid="link-contact-whatsapp"
-                >
-                  WhatsApp
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Mail className="w-5 h-5 text-primary" />
-                <a 
-                  href={`mailto:${EMAIL}`} 
-                  className="hover:text-foreground transition-colors"
-                  data-testid="link-email"
-                >
-                  {EMAIL}
-                </a>
-              </div>
+                  <motion.div
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.35, delay: 0.3 + index * 0.1, type: "spring", stiffness: 200 }}
+                  >
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </motion.div>
+                  <a 
+                    href={item.href}
+                    {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="hover:text-foreground transition-colors"
+                    data-testid={item.testId}
+                  >
+                    {item.label}
+                  </a>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            initial={{ opacity: 0, y: 25, scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-30px" }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
             {submitted ? (
               <div className="text-center py-12" data-testid="contact-success">
@@ -592,8 +612,20 @@ function Footer() {
   return (
     <footer className="py-12 border-t border-border bg-[hsl(220,6%,9%)]" data-testid="footer">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col items-center md:items-start gap-2">
+        <motion.div 
+          className="flex flex-col md:flex-row items-center justify-between gap-6"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-30px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          <motion.div 
+            className="flex flex-col items-center md:items-start gap-2"
+            initial={{ opacity: 0, x: -15 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          >
             <div className="flex items-center gap-2" data-testid="footer-brand">
               <motion.img 
                 src={logoImage} 
@@ -605,9 +637,15 @@ function Footer() {
               <span className="font-semibold text-foreground tracking-tight">AM Web Studio</span>
             </div>
             <p className="text-sm text-muted-foreground" data-testid="text-footer-tagline">Desarrollo de Sitios Web</p>
-          </div>
+          </motion.div>
           
-          <div className="flex flex-col items-center md:items-end gap-2">
+          <motion.div 
+            className="flex flex-col items-center md:items-end gap-2"
+            initial={{ opacity: 0, x: 15 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+          >
             <a 
               href={`mailto:${EMAIL}`} 
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -618,8 +656,8 @@ function Footer() {
             <p className="text-xs text-muted-foreground" data-testid="text-footer-copyright">
               © {new Date().getFullYear()} AM Web Studio. Todos los derechos reservados.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </footer>
   );
