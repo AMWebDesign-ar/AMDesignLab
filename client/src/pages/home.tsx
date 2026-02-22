@@ -457,7 +457,8 @@ function ContactSection() {
             <p className="text-muted-foreground/70 text-sm leading-relaxed max-w-sm">
               Respondemos rápido y te orientamos.
             </p>
-            <div className="flex flex-col gap-4 mt-7">
+            <p className="text-muted-foreground/90 text-sm mt-5 font-medium">Te responderemos en menos de 24 hs.</p>
+            <div className="flex flex-col gap-4 mt-5">
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary" />
                 <a 
@@ -515,7 +516,6 @@ function ContactSection() {
               </div>
             ) : (
               <>
-              <p className="text-muted-foreground/40 text-xs mb-3 tracking-wide">Te responderemos en menos de 24 hs.</p>
               <form onSubmit={handleSubmit} className="space-y-4" data-testid="form-contact">
                 <div>
                   <Input
