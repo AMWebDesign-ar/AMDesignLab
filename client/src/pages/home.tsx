@@ -98,7 +98,7 @@ function Header() {
         <div className="hidden md:flex items-center gap-3">
           <a 
             href="#contacto"
-            className={`inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.45)] bg-[rgba(59,130,246,0.08)] backdrop-blur-[6px] animate-[glowPulse_3s_ease-in-out_infinite] hover:bg-[rgba(59,130,246,0.14)] hover:shadow-[0_0_24px_rgba(59,130,246,0.25)] hover:-translate-y-0.5 transition-all duration-300 ease-in-out ${scrolled ? 'opacity-100 -translate-y-[3px] shadow-[0_0_14px_rgba(59,130,246,0.25)]' : 'opacity-[0.85] -translate-y-[2px] shadow-[0_0_16px_rgba(59,130,246,0.15)]'}`}
+            className={`inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.45)] bg-[rgba(59,130,246,0.08)] backdrop-blur-[6px] animate-[glowPulse_3s_ease-in-out_infinite] cursor-pointer hover:bg-[rgba(59,130,246,0.14)] hover:shadow-[0_0_24px_rgba(59,130,246,0.25)] hover:scale-[1.01] transition-all duration-200 ease-in-out ${scrolled ? 'opacity-100 -translate-y-[3px] shadow-[0_0_14px_rgba(59,130,246,0.25)]' : 'opacity-[0.85] -translate-y-[2px] shadow-[0_0_16px_rgba(59,130,246,0.15)]'}`}
             data-testid="link-hablemos"
           >
             <span className="relative">HABLEMOS</span>
@@ -205,7 +205,7 @@ function HeroSection() {
         >
           <a 
             href="#servicios"
-            className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group shadow-[0_0_20px_rgba(59,130,246,0.35)] transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
+            className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group shadow-[0_0_20px_rgba(59,130,246,0.35)] cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
             data-testid="button-hero-servicios"
           >
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
@@ -301,7 +301,7 @@ function ServicesSection() {
                 style={{ opacity: isDimmed ? 0.93 : 1, transition: 'opacity 0.25s ease-in-out', alignSelf: 'flex-end' }}
               >
                 <Card 
-                  className={`group p-8 min-h-[280px] bg-card/60 backdrop-blur-md border shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04),0_4px_24px_rgba(0,0,0,0.15)] cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_8px_32px_rgba(0,0,0,0.2),0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out relative overflow-hidden ${isOpen ? 'border-primary/40 bg-[hsl(220,8%,16%)]/70 animate-[glowPulse_3s_ease-in-out_infinite]' : ''} ${isDimmed ? 'border-white/[0.04]' : 'border-white/[0.07]'}`}
+                  className={`group p-8 min-h-[280px] bg-card/60 backdrop-blur-md border shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04),0_4px_24px_rgba(0,0,0,0.15)] cursor-pointer hover:-translate-y-1.5 hover:scale-[1.01] hover:border-primary/50 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_8px_32px_rgba(0,0,0,0.2),0_0_20px_rgba(59,130,246,0.08)] transition-all duration-200 ease-in-out relative overflow-hidden ${isOpen ? 'border-primary/40 bg-[hsl(220,8%,16%)]/70 animate-[glowPulse_3s_ease-in-out_infinite]' : ''} ${isDimmed ? 'border-white/[0.04]' : 'border-white/[0.07]'}`}
                   data-testid={`card-service-${index}`}
                   onClick={() => toggleCard(index)}
                 >
