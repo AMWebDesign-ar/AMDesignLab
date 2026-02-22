@@ -179,7 +179,7 @@ function HeroSection() {
           data-testid="badge-hero"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-          <span className="text-[1.05rem] text-foreground/90 relative z-10">✦ Proyectos para marcas y emprendedores en Argentina</span>
+          <span className="text-[1.05rem] text-foreground/90 relative z-10">✦ Proyectos para marcas y negocios que quieren crecer online</span>
         </motion.div>
         <motion.h1 
           className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto"
