@@ -551,7 +551,7 @@ function ContactSection() {
                   ) : (
                     <Send className="w-4 h-4 mr-2" />
                   )}
-                  {isSubmitting ? "Enviando..." : "Enviar consulta"}
+                  {isSubmitting ? "Enviando..." : "Enviar mensaje"}
                 </Button>
               </form>
             )}
