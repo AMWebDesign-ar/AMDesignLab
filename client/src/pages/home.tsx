@@ -149,7 +149,7 @@ function Header() {
               ))}
               <a
                 href="#contacto"
-                className="inline-flex items-center justify-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.35)] bg-[rgba(59,130,246,0.07)] backdrop-blur-[6px] shadow-[0_0_10px_rgba(59,130,246,0.12),inset_0_0_8px_rgba(59,130,246,0.06)] [text-shadow:0_0_8px_rgba(59,130,246,0.4)] hover:bg-[rgba(59,130,246,0.12)] hover:border-[rgba(59,130,246,0.5)] hover:shadow-[0_0_18px_rgba(59,130,246,0.22),inset_0_0_10px_rgba(59,130,246,0.08)] hover:[text-shadow:0_0_12px_rgba(59,130,246,0.55)] hover:-translate-y-0.5 mt-2 transition-all duration-300 ease-in-out"
+                className="inline-flex items-center justify-center px-5 py-2 text-[0.65rem] font-semibold text-white rounded-full border border-[rgba(59,130,246,0.35)] bg-[rgba(59,130,246,0.07)] backdrop-blur-[6px] shadow-[0_0_6px_rgba(59,130,246,0.1),inset_0_0_6px_rgba(59,130,246,0.05)] [text-shadow:0_0_6px_rgba(59,130,246,0.35)] hover:bg-[rgba(59,130,246,0.12)] hover:border-[rgba(59,130,246,0.45)] mt-2 transition-all duration-300 ease-in-out"
                 onClick={handleNavClick}
                 data-testid="link-mobile-hablemos"
               >
