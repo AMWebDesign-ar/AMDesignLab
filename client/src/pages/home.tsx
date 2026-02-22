@@ -61,8 +61,18 @@ function Header() {
     { href: "#nosotros", label: "Nosotros" },
   ];
 
-  const handleNavClick = () => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute('href');
     setMobileMenuOpen(false);
+    if (href) {
+      setTimeout(() => {
+        const el = document.querySelector(href);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
   };
 
   return (
