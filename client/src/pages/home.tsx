@@ -206,9 +206,9 @@ function HeroSection() {
         </motion.div>
         <motion.h1 
           className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto"
-          initial={{ opacity: 0, filter: "blur(20px)", scale: 1.06 }}
+          initial={{ opacity: 0, filter: "blur(24px)", scale: 1.08 }}
           animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-          transition={{ duration: 2.5, ease: [0.05, 0.7, 0.1, 1], delay: 0.4 }}
+          transition={{ duration: 4, ease: [0.03, 0.6, 0.08, 1], delay: 0.5 }}
           data-testid="text-hero-title"
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
         >
