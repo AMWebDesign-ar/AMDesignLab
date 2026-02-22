@@ -386,11 +386,11 @@ function WhyChooseUsSection() {
             </p>
           </motion.div>
 
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 items-end">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                className="flex gap-4 p-5 rounded-xl bg-background/50 border border-border/60 hover:border-primary/30 transition-all duration-[250ms] ease-in-out"
+                className="flex gap-4 p-5 rounded-xl bg-background/50 border border-border/60 hover:border-primary/30 transition-all duration-[250ms] ease-in-out w-full"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
