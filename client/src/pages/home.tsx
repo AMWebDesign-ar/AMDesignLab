@@ -370,20 +370,40 @@ function WhyChooseUsSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-nosotros-title">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight" 
+              data-testid="text-nosotros-title"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+            >
               Por qué elegirnos
-            </h2>
-            <p className="text-muted-foreground text-lg mb-2" data-testid="text-nosotros-subtitle">
+            </motion.h2>
+            <motion.p 
+              className="text-muted-foreground text-lg mb-2" 
+              data-testid="text-nosotros-subtitle"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
+            >
               Comprometidos con tu éxito
-            </p>
-            <p className="text-muted-foreground/70 text-sm leading-relaxed max-w-sm">
+            </motion.p>
+            <motion.p 
+              className="text-muted-foreground/70 text-sm leading-relaxed max-w-sm"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.35, ease: "easeOut" }}
+            >
               Trabajamos codo a codo con cada cliente para entregar soluciones digitales que realmente generan resultados.
-            </p>
+            </motion.p>
           </motion.div>
 
           <div className="flex flex-col gap-5 items-end">
@@ -391,16 +411,22 @@ function WhyChooseUsSection() {
               <motion.div
                 key={benefit.title}
                 className="flex gap-4 p-5 rounded-xl bg-background/50 border-2 border-border/50 hover:border-primary/30 hover:translate-y-[-2px] hover:bg-background/70 transition-all duration-[250ms] ease-in-out w-full cursor-default"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 25, scale: 0.97 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.5, delay: 0.15 + index * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
                 data-testid={`benefit-${index}`}
               >
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <motion.div 
+                    className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.3 + index * 0.12, type: "spring", stiffness: 200 }}
+                  >
                     <CheckCircle2 className="w-5 h-5 text-primary" />
-                  </div>
+                  </motion.div>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">{benefit.title}</h3>
