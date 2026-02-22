@@ -454,10 +454,10 @@ function ContactSection() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 tracking-tight" data-testid="text-contacto-title">
               Hablemos de tu proyecto
             </h2>
-            <p className="text-muted-foreground/70 text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-muted-foreground/70 text-sm leading-relaxed max-w-sm">
               Respondemos rápido y te orientamos.
             </p>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 mt-7">
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary" />
                 <a 
