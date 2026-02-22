@@ -155,15 +155,15 @@ function Header() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  initial={{ opacity: 0, x: -40, rotateX: -15 }}
-                  animate={{ opacity: 1, x: 0, rotateX: 0 }}
-                  exit={{ opacity: 0, x: 30, rotateX: 10 }}
+                  initial={{ opacity: 0, x: -50, rotateX: -20, filter: "blur(8px)" }}
+                  animate={{ opacity: 1, x: 0, rotateX: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, x: 40, rotateX: 12, filter: "blur(6px)" }}
                   transition={{ 
-                    duration: 0.5, 
-                    delay: 0.15 + i * 0.12, 
-                    ease: [0.16, 1, 0.3, 1] 
+                    duration: 0.85, 
+                    delay: 0.2 + i * 0.18, 
+                    ease: [0.12, 0.8, 0.2, 1] 
                   }}
-                  className="text-base text-muted-foreground hover:text-white py-3 px-4 rounded-xl hover:bg-[rgba(59,130,246,0.08)] hover:shadow-[inset_0_0_12px_rgba(59,130,246,0.06),0_0_8px_rgba(59,130,246,0.04)] hover:[text-shadow:0_0_8px_rgba(59,130,246,0.3)] transition-all duration-300 border border-transparent hover:border-[rgba(59,130,246,0.12)] hover:translate-x-3 hover:scale-[1.02]"
+                  className="text-base text-muted-foreground hover:text-white py-3 px-4 rounded-xl bg-[rgba(59,130,246,0.03)] hover:bg-[rgba(59,130,246,0.1)] shadow-[0_0_6px_rgba(59,130,246,0.06),inset_0_0_4px_rgba(59,130,246,0.04)] hover:shadow-[0_0_18px_rgba(59,130,246,0.15),inset_0_0_14px_rgba(59,130,246,0.08)] [text-shadow:0_0_4px_rgba(59,130,246,0.15)] hover:[text-shadow:0_0_12px_rgba(59,130,246,0.45)] transition-all duration-500 ease-out border border-[rgba(59,130,246,0.08)] hover:border-[rgba(59,130,246,0.25)] hover:translate-x-3 hover:scale-[1.03]"
                   onClick={handleNavClick}
                   data-testid={`link-mobile-${link.label.toLowerCase()}`}
                 >
