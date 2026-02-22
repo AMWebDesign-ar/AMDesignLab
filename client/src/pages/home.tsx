@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Code2, 
@@ -113,7 +112,6 @@ function Header() {
           >
             <span className="relative">HABLEMOS</span>
           </a>
-          <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
