@@ -198,7 +198,7 @@ function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(59,130,246,0.08),transparent_70%)] blur-[60px] pointer-events-none" />
       
       <motion.div 
-        className="max-w-7xl mx-auto px-6 py-20 pt-[calc(5rem+15px)] text-left md:text-center relative z-10"
+        className="max-w-7xl mx-auto px-6 py-20 pt-[calc(5rem+15px)] text-center relative z-10"
         initial="initial"
         animate="animate"
         variants={staggerContainer}
@@ -212,7 +212,7 @@ function HeroSection() {
           <span className="text-[1.05rem] text-foreground/90 relative z-10">✦ Creamos webs que convierten visitas en clientes</span>
         </motion.div>
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl md:mx-auto"
+          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto"
           variants={fadeInUp}
           data-testid="text-hero-title"
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
@@ -223,7 +223,7 @@ function HeroSection() {
         </motion.h1>
         
         <motion.p 
-          className="text-lg md:text-xl text-foreground/80 max-w-2xl md:mx-auto mt-3 mb-10 drop-shadow-md"
+          className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mt-3 mb-10 drop-shadow-md"
           variants={fadeInUp}
           data-testid="text-hero-subtitle"
         >
