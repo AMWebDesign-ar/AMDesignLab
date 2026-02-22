@@ -91,7 +91,7 @@ function Header() {
         <div className="hidden md:flex items-center gap-3">
           <a 
             href="#contacto"
-            className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+            className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group animate-[glowPulse_3s_ease-in-out_infinite]"
             data-testid="link-hablemos"
           >
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
@@ -136,7 +136,7 @@ function Header() {
               ))}
               <a
                 href="#contacto"
-                className="relative inline-flex items-center justify-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group mt-2"
+                className="relative inline-flex items-center justify-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group mt-2 animate-[glowPulse_3s_ease-in-out_infinite]"
                 onClick={handleNavClick}
                 data-testid="link-mobile-hablemos"
               >
@@ -283,7 +283,7 @@ function ServicesSection() {
                 style={{ opacity: isDimmed ? 0.93 : 1, transition: 'opacity 0.25s ease-in-out', alignSelf: 'flex-end' }}
               >
                 <Card 
-                  className={`group p-8 min-h-[280px] bg-card cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out relative overflow-hidden ${isOpen ? 'border-primary/40 shadow-[0_0_15px_rgba(59,130,246,0.06)] bg-[hsl(220,8%,16%)]' : ''} ${isDimmed ? 'border-card-border/40' : 'border-card-border'}`}
+                  className={`group p-8 min-h-[280px] bg-card cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out relative overflow-hidden ${isOpen ? 'border-primary/40 bg-[hsl(220,8%,16%)] animate-[glowPulse_3s_ease-in-out_infinite]' : ''} ${isDimmed ? 'border-card-border/40' : 'border-card-border'}`}
                   data-testid={`card-service-${index}`}
                   onClick={() => toggleCard(index)}
                 >

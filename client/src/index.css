@@ -7,6 +7,11 @@
   100% { background-position: -200% 0; }
 }
 
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(59,130,246,0.2); }
+  50% { box-shadow: 0 0 20px rgba(59,130,246,0.35); }
+}
+
 /* LIGHT MODE */
 :root {
   --button-outline: rgba(0,0,0, .10);
