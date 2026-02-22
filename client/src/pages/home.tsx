@@ -544,31 +544,28 @@ function ContactSection() {
                 { icon: MessageCircle, href: WHATSAPP_LINK, label: "WhatsApp", testId: "link-contact-whatsapp", external: true },
                 { icon: Mail, href: `mailto:${EMAIL}`, label: EMAIL, testId: "link-email" }
               ].map((item, index) => (
-                <motion.div 
+                <motion.a 
                   key={item.testId}
-                  className="flex items-center gap-3 text-muted-foreground"
-                  initial={{ opacity: 0, x: -15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  href={item.href}
+                  {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="flex items-center gap-4 px-5 py-3.5 rounded-xl bg-[rgba(59,130,246,0.04)] border border-[rgba(59,130,246,0.1)] backdrop-blur-sm text-muted-foreground shadow-[0_0_8px_rgba(59,130,246,0.05),inset_0_0_6px_rgba(59,130,246,0.03)] hover:bg-[rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.3)] hover:shadow-[0_0_22px_rgba(59,130,246,0.18),inset_0_0_12px_rgba(59,130,246,0.08)] hover:text-white hover:[text-shadow:0_0_8px_rgba(59,130,246,0.3)] hover:translate-x-2 hover:scale-[1.02] transition-all duration-500 ease-out cursor-pointer group"
+                  initial={{ opacity: 0, x: -40, filter: "blur(6px)" }}
+                  whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.2 + index * 0.1, ease: "easeOut" }}
+                  transition={{ duration: 0.8, delay: 0.25 + index * 0.15, ease: [0.12, 0.8, 0.2, 1] }}
+                  data-testid={item.testId}
                 >
                   <motion.div
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
+                    initial={{ scale: 0.3, opacity: 0, rotate: -20 }}
+                    whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.35, delay: 0.3 + index * 0.1, type: "spring", stiffness: 200 }}
+                    transition={{ duration: 0.7, delay: 0.35 + index * 0.15, type: "spring", stiffness: 150, damping: 12 }}
+                    className="w-10 h-10 rounded-lg bg-[rgba(59,130,246,0.08)] border border-[rgba(59,130,246,0.15)] flex items-center justify-center shadow-[0_0_10px_rgba(59,130,246,0.08)] group-hover:shadow-[0_0_18px_rgba(59,130,246,0.2)] group-hover:border-[rgba(59,130,246,0.35)] transition-all duration-500"
                   >
-                    <item.icon className="w-5 h-5 text-primary" />
+                    <item.icon className="w-5 h-5 text-primary group-hover:drop-shadow-[0_0_6px_rgba(59,130,246,0.5)] transition-all duration-500" />
                   </motion.div>
-                  <a 
-                    href={item.href}
-                    {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="hover:text-foreground transition-colors"
-                    data-testid={item.testId}
-                  >
-                    {item.label}
-                  </a>
-                </motion.div>
+                  <span className="text-sm font-medium">{item.label}</span>
+                </motion.a>
               ))}
             </div>
           </motion.div>
@@ -625,7 +622,7 @@ function ContactSection() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full h-14 text-base font-semibold tracking-wide py-6 opacity-90 animate-[glowPulse_3s_ease-in-out_infinite] hover:shadow-[0_0_28px_rgba(59,130,246,0.4)] hover:scale-[1.02] transition-all duration-[250ms] ease-in-out" 
+                  className="w-full h-14 text-base font-semibold tracking-wide py-6 border border-[rgba(59,130,246,0.3)] shadow-[0_0_12px_rgba(59,130,246,0.12),inset_0_0_8px_rgba(59,130,246,0.06)] hover:shadow-[0_0_30px_rgba(59,130,246,0.3),inset_0_0_14px_rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.5)] hover:scale-[1.03] hover:[text-shadow:0_0_10px_rgba(255,255,255,0.3)] active:scale-[0.98] transition-all duration-500 ease-out" 
                   disabled={isSubmitting}
                   data-testid="button-submit-contact"
                 >
