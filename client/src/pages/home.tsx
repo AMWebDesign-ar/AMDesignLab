@@ -129,11 +129,11 @@ function Header() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10, backdropFilter: "blur(0px)" }}
-            animate={{ opacity: 1, y: 0, backdropFilter: "blur(16px)" }}
-            exit={{ opacity: 0, y: -10, backdropFilter: "blur(0px)" }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden bg-[rgba(10,12,18,0.65)] border-b border-[rgba(59,130,246,0.15)] shadow-[0_8px_32px_rgba(0,0,0,0.3),0_0_20px_rgba(59,130,246,0.06)]"
+            initial={{ opacity: 0, scaleY: 0.3, y: -20, transformOrigin: "top" }}
+            animate={{ opacity: 1, scaleY: 1, y: 0 }}
+            exit={{ opacity: 0, scaleY: 0.3, y: -20 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden bg-[rgba(10,12,18,0.65)] backdrop-blur-[16px] border-b border-[rgba(59,130,246,0.15)] shadow-[0_8px_32px_rgba(0,0,0,0.3),0_0_20px_rgba(59,130,246,0.06)]"
             onMouseLeave={() => setMobileMenuOpen(false)}
             data-testid="mobile-menu"
           >
@@ -142,11 +142,11 @@ function Header() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                  className="text-base text-muted-foreground hover:text-white py-3 px-4 rounded-xl hover:bg-[rgba(59,130,246,0.08)] hover:shadow-[inset_0_0_12px_rgba(59,130,246,0.06),0_0_8px_rgba(59,130,246,0.04)] hover:[text-shadow:0_0_8px_rgba(59,130,246,0.3)] transition-all duration-300 border border-transparent hover:border-[rgba(59,130,246,0.12)]"
+                  initial={{ opacity: 0, x: -30, scale: 0.9, filter: "blur(6px)" }}
+                  animate={{ opacity: 1, x: 0, scale: 1, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, x: 20, scale: 0.95, filter: "blur(4px)" }}
+                  transition={{ duration: 0.4, delay: 0.08 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-base text-muted-foreground hover:text-white py-3 px-4 rounded-xl hover:bg-[rgba(59,130,246,0.08)] hover:shadow-[inset_0_0_12px_rgba(59,130,246,0.06),0_0_8px_rgba(59,130,246,0.04)] hover:[text-shadow:0_0_8px_rgba(59,130,246,0.3)] transition-all duration-300 border border-transparent hover:border-[rgba(59,130,246,0.12)] hover:translate-x-2"
                   onClick={handleNavClick}
                   data-testid={`link-mobile-${link.label.toLowerCase()}`}
                 >
