@@ -662,7 +662,7 @@ function Footer() {
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />
-              <span className="text-[0.95rem] font-bold text-white tracking-[0.02em] [text-shadow:0_0_12px_rgba(59,130,246,0.25)] drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", WebkitFontSmoothing: "antialiased" }}>AM Web Studio</span>
+              <span className="text-[0.95rem] font-bold text-white tracking-[0.02em] [text-shadow:0_0_12px_rgba(59,130,246,0.25)] drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", WebkitFontSmoothing: "antialiased" }}>AMC Web Studio</span>
             </div>
           </motion.div>
           
