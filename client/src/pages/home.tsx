@@ -514,6 +514,8 @@ function ContactSection() {
                 </Button>
               </div>
             ) : (
+              <>
+              <p className="text-muted-foreground/60 text-xs mb-3 tracking-wide">Te responderemos en menos de 24 hs.</p>
               <form onSubmit={handleSubmit} className="space-y-4" data-testid="form-contact">
                 <div>
                   <Input
@@ -554,6 +556,7 @@ function ContactSection() {
                   {isSubmitting ? "Enviando..." : "Enviar mensaje"}
                 </Button>
               </form>
+              </>
             )}
           </motion.div>
         </div>
