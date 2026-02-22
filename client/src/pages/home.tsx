@@ -107,7 +107,7 @@ function Header() {
         <div className="flex items-center gap-2 md:gap-3">
           <a 
             href="#contacto"
-            className={`hidden md:inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.35)] bg-[rgba(59,130,246,0.07)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_8px_rgba(59,130,246,0.4)] shadow-[0_0_10px_rgba(59,130,246,0.12),inset_0_0_8px_rgba(59,130,246,0.06)] hover:bg-[rgba(59,130,246,0.12)] hover:border-[rgba(59,130,246,0.5)] hover:shadow-[0_0_18px_rgba(59,130,246,0.22),inset_0_0_10px_rgba(59,130,246,0.08)] hover:[text-shadow:0_0_12px_rgba(59,130,246,0.55)] hover:scale-[1.01] transition-all duration-300 ease-in-out ${scrolled ? 'opacity-100' : 'opacity-[0.9]'}`}
+            className={`hidden md:inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.5)] bg-[rgba(59,130,246,0.1)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_10px_rgba(59,130,246,0.5)] shadow-[0_0_14px_rgba(59,130,246,0.2),inset_0_0_10px_rgba(59,130,246,0.1)] hover:bg-[rgba(59,130,246,0.18)] hover:border-[rgba(59,130,246,0.7)] hover:shadow-[0_0_24px_rgba(59,130,246,0.35),inset_0_0_14px_rgba(59,130,246,0.15)] hover:[text-shadow:0_0_16px_rgba(59,130,246,0.7)] hover:scale-[1.08] active:scale-[0.97] transition-all duration-300 ease-in-out ${scrolled ? 'opacity-100' : 'opacity-[0.9]'}`}
             data-testid="link-hablemos-desktop"
           >
             <span className="relative">HABLEMOS</span>
@@ -160,7 +160,7 @@ function HeroSection() {
     <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20" data-testid="section-hero">
       <a 
         href="#contacto"
-        className="md:hidden fixed top-[76px] right-6 z-40 inline-flex items-center px-4 py-1.5 text-[0.6rem] font-semibold text-white rounded-full border border-[rgba(59,130,246,0.35)] bg-[rgba(59,130,246,0.07)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_8px_rgba(59,130,246,0.4)] shadow-[0_0_10px_rgba(59,130,246,0.12),inset_0_0_8px_rgba(59,130,246,0.06)] transition-all duration-300 ease-in-out"
+        className="md:hidden fixed top-[76px] right-6 z-40 inline-flex items-center px-4 py-1.5 text-[0.6rem] font-semibold text-white rounded-full border border-[rgba(59,130,246,0.5)] bg-[rgba(59,130,246,0.1)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_10px_rgba(59,130,246,0.5)] shadow-[0_0_14px_rgba(59,130,246,0.2),inset_0_0_10px_rgba(59,130,246,0.1)] hover:bg-[rgba(59,130,246,0.18)] hover:border-[rgba(59,130,246,0.7)] hover:shadow-[0_0_24px_rgba(59,130,246,0.35),inset_0_0_14px_rgba(59,130,246,0.15)] hover:[text-shadow:0_0_16px_rgba(59,130,246,0.7)] hover:scale-[1.08] active:scale-[0.97] transition-all duration-300 ease-in-out"
         data-testid="link-hablemos"
       >
         <span className="relative">HABLEMOS</span>
