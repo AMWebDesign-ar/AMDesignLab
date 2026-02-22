@@ -68,7 +68,7 @@ function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50" data-testid="header">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
-        <a href="#inicio" className="flex items-center gap-2 hover:opacity-80 transition-opacity" data-testid="logo-brand">
+        <a href="#inicio" className="flex items-center gap-2 hover:opacity-80 transition-opacity translate-y-[2px]" data-testid="logo-brand">
           <motion.img 
             src={logoImage} 
             alt="AM Digital" 
