@@ -274,6 +274,7 @@ function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           >
             Nuestros servicios
+            <div className="w-10 h-[2px] bg-[rgba(59,130,246,0.6)] mt-3 mx-auto" />
           </motion.h2>
           <motion.p 
             className="text-muted-foreground text-lg max-w-2xl mx-auto" 
@@ -402,6 +403,7 @@ function WhyChooseUsSection() {
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
               Por qué elegirnos
+              <div className="w-10 h-[2px] bg-[rgba(59,130,246,0.6)] mt-3" />
             </motion.h2>
             <motion.p 
               className="text-muted-foreground text-lg mb-2" 
@@ -504,6 +506,7 @@ function ContactSection() {
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
               Hablemos de tu proyecto
+              <div className="w-10 h-[2px] bg-[rgba(59,130,246,0.6)] mt-3" />
             </motion.h2>
             <div className="flex flex-col gap-4 mt-7">
               {[
