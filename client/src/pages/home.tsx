@@ -165,6 +165,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,12%,10%)]/60 via-[hsl(218,10%,14%)]/35 to-[hsl(220,8%,12%)]/85" />
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,10%,11%)]/45 via-transparent to-[hsl(220,10%,11%)]/45" />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-[hsl(217,40%,18%)]/5 to-[hsl(217,40%,22%)]/4" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(59,130,246,0.08),transparent_70%)] blur-[60px] pointer-events-none" />
       
       <motion.div 
         className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10"
