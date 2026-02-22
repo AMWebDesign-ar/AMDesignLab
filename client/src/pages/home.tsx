@@ -368,43 +368,47 @@ function WhyChooseUsSection() {
     <section id="nosotros" className="py-20 md:py-32 bg-[hsl(220,6%,11%)] relative" data-testid="section-nosotros">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-nosotros-title">
-            Por qué elegirnos
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto" data-testid="text-nosotros-subtitle">
-            Comprometidos con tu éxito
-          </p>
-        </motion.div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <motion.div
-              key={benefit.title}
-              className="flex gap-4 p-6 rounded-xl bg-background border border-border"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              data-testid={`benefit-${index}`}
-            >
-              <div className="flex-shrink-0">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-nosotros-title">
+              Por qué elegirnos
+            </h2>
+            <p className="text-muted-foreground text-lg mb-2" data-testid="text-nosotros-subtitle">
+              Comprometidos con tu éxito
+            </p>
+            <p className="text-muted-foreground/70 text-sm leading-relaxed max-w-md">
+              Trabajamos codo a codo con cada cliente para entregar soluciones digitales que realmente generan resultados.
+            </p>
+          </motion.div>
+
+          <div className="flex flex-col gap-5">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                className="flex gap-4 p-5 rounded-xl bg-background/50 border border-border/60 hover:border-primary/30 transition-all duration-[250ms] ease-in-out"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                data-testid={`benefit-${index}`}
+              >
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-1">{benefit.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
-              </div>
-            </motion.div>
-          ))}
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">{benefit.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
