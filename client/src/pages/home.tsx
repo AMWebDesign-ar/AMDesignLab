@@ -297,7 +297,7 @@ function ServicesSection() {
                 style={{ opacity: isDimmed ? 0.93 : 1, transition: 'opacity 0.25s ease-in-out', alignSelf: 'flex-end' }}
               >
                 <Card 
-                  className={`group p-8 min-h-[280px] bg-card cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out relative overflow-hidden ${isOpen ? 'border-primary/40 bg-[hsl(220,8%,16%)] animate-[glowPulse_3s_ease-in-out_infinite]' : ''} ${isDimmed ? 'border-card-border/40' : 'border-card-border'}`}
+                  className={`group p-8 min-h-[280px] bg-card/60 backdrop-blur-md border shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04),0_4px_24px_rgba(0,0,0,0.15)] cursor-pointer hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_8px_32px_rgba(0,0,0,0.2),0_0_20px_rgba(59,130,246,0.08)] transition-all duration-[250ms] ease-in-out relative overflow-hidden ${isOpen ? 'border-primary/40 bg-[hsl(220,8%,16%)]/70 animate-[glowPulse_3s_ease-in-out_infinite]' : ''} ${isDimmed ? 'border-white/[0.04]' : 'border-white/[0.07]'}`}
                   data-testid={`card-service-${index}`}
                   onClick={() => toggleCard(index)}
                 >
@@ -424,7 +424,7 @@ function WhyChooseUsSection() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                className="flex gap-4 p-5 rounded-xl bg-background/50 border-2 border-border/50 hover:border-primary/30 hover:translate-y-[-2px] hover:bg-background/70 transition-all duration-[250ms] ease-in-out w-full cursor-default"
+                className="flex gap-4 p-5 rounded-xl bg-background/40 backdrop-blur-md border border-white/[0.07] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04),0_4px_24px_rgba(0,0,0,0.12)] hover:border-primary/30 hover:translate-y-[-2px] hover:bg-background/50 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_8px_32px_rgba(0,0,0,0.18)] transition-all duration-[250ms] ease-in-out w-full cursor-default"
                 initial={{ opacity: 0, y: 25, scale: 0.97 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-30px" }}
@@ -537,6 +537,7 @@ function ContactSection() {
           </motion.div>
 
           <motion.div
+            className="bg-background/40 backdrop-blur-md border border-white/[0.07] rounded-2xl p-8 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04),0_4px_24px_rgba(0,0,0,0.15)]"
             initial={{ opacity: 0, y: 25, scale: 0.97 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-30px" }}
