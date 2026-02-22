@@ -107,7 +107,7 @@ function Header() {
         <div className="flex items-center gap-3">
           <a 
             href="#contacto"
-            className={`hidden md:inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.45)] bg-[rgba(59,130,246,0.08)] backdrop-blur-[6px] animate-[glowPulse_3s_ease-in-out_infinite] cursor-pointer hover:bg-[rgba(59,130,246,0.14)] hover:shadow-[0_0_24px_rgba(59,130,246,0.25)] hover:scale-[1.01] transition-all duration-200 ease-in-out ${scrolled ? 'opacity-100 -translate-y-[3px] shadow-[0_0_14px_rgba(59,130,246,0.25)]' : 'opacity-[0.85] -translate-y-[2px] shadow-[0_0_16px_rgba(59,130,246,0.15)]'}`}
+            className={`hidden md:inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.3)] bg-[rgba(59,130,246,0.06)] backdrop-blur-[6px] cursor-pointer hover:bg-[rgba(59,130,246,0.12)] hover:border-[rgba(59,130,246,0.4)] hover:shadow-[0_0_16px_rgba(59,130,246,0.18)] hover:scale-[1.01] transition-all duration-300 ease-in-out ${scrolled ? 'opacity-100 -translate-y-[3px] shadow-[0_0_8px_rgba(59,130,246,0.12)]' : 'opacity-[0.9] -translate-y-[2px] shadow-[0_0_6px_rgba(59,130,246,0.08)]'}`}
             data-testid="link-hablemos"
           >
             <span className="relative">HABLEMOS</span>
@@ -149,7 +149,7 @@ function Header() {
               ))}
               <a
                 href="#contacto"
-                className="inline-flex items-center justify-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.45)] bg-[rgba(59,130,246,0.08)] backdrop-blur-[6px] shadow-[0_0_16px_rgba(59,130,246,0.15)] animate-[glowPulse_3s_ease-in-out_infinite] hover:-translate-y-0.5 mt-2 transition-all duration-300 ease-in-out"
+                className="inline-flex items-center justify-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.3)] bg-[rgba(59,130,246,0.06)] backdrop-blur-[6px] shadow-[0_0_6px_rgba(59,130,246,0.08)] hover:bg-[rgba(59,130,246,0.12)] hover:border-[rgba(59,130,246,0.4)] hover:shadow-[0_0_16px_rgba(59,130,246,0.18)] hover:-translate-y-0.5 mt-2 transition-all duration-300 ease-in-out"
                 onClick={handleNavClick}
                 data-testid="link-mobile-hablemos"
               >
