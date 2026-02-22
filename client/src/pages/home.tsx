@@ -664,7 +664,6 @@ function Footer() {
               />
               <span className="text-[0.95rem] font-bold text-white tracking-[0.02em] [text-shadow:0_0_12px_rgba(59,130,246,0.25)] drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", WebkitFontSmoothing: "antialiased" }}>AM Web Studio</span>
             </div>
-            <p className="text-sm text-muted-foreground" data-testid="text-footer-tagline">Desarrollo de Sitios Web</p>
           </motion.div>
           
           <motion.div 
@@ -674,13 +673,6 @@ function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.85, delay: 0.25, ease: [0.12, 0.8, 0.2, 1] }}
           >
-            <a 
-              href={`mailto:${EMAIL}`} 
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="link-footer-email"
-            >
-              {EMAIL}
-            </a>
             <p className="text-xs text-muted-foreground" data-testid="text-footer-copyright">
               © {new Date().getFullYear()} AM Web Studio. Todos los derechos reservados.
             </p>
