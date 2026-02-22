@@ -375,13 +375,13 @@ function WhyChooseUsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-nosotros-title">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight" data-testid="text-nosotros-title">
               Por qué elegirnos
             </h2>
             <p className="text-muted-foreground text-lg mb-2" data-testid="text-nosotros-subtitle">
               Comprometidos con tu éxito
             </p>
-            <p className="text-muted-foreground/70 text-sm leading-relaxed max-w-md">
+            <p className="text-muted-foreground/70 text-sm leading-relaxed max-w-sm">
               Trabajamos codo a codo con cada cliente para entregar soluciones digitales que realmente generan resultados.
             </p>
           </motion.div>
