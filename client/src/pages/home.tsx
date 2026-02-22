@@ -201,7 +201,7 @@ function HeroSection() {
         </motion.p>
         
         <motion.div 
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4"
           variants={fadeInUp}
         >
           <a 
@@ -212,7 +212,7 @@ function HeroSection() {
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
             <span className="absolute inset-[2px] rounded-full bg-background/90 group-hover:bg-background/70 transition-colors" />
             <span className="relative flex items-center gap-2">
-              EMPEZAR PROYECTO
+              EMPEZAR AHORA
               <ArrowRight className="w-4 h-4" />
             </span>
           </a>
