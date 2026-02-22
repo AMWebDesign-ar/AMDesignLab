@@ -95,10 +95,10 @@ function Header() {
             Nosotros
           </a>
         </nav>
-        <div className="hidden md:flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <a 
             href="#contacto"
-            className={`inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.45)] bg-[rgba(59,130,246,0.08)] backdrop-blur-[6px] animate-[glowPulse_3s_ease-in-out_infinite] cursor-pointer hover:bg-[rgba(59,130,246,0.14)] hover:shadow-[0_0_24px_rgba(59,130,246,0.25)] hover:scale-[1.01] transition-all duration-200 ease-in-out ${scrolled ? 'opacity-100 -translate-y-[3px] shadow-[0_0_14px_rgba(59,130,246,0.25)]' : 'opacity-[0.85] -translate-y-[2px] shadow-[0_0_16px_rgba(59,130,246,0.15)]'}`}
+            className={`hidden md:inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.45)] bg-[rgba(59,130,246,0.08)] backdrop-blur-[6px] animate-[glowPulse_3s_ease-in-out_infinite] cursor-pointer hover:bg-[rgba(59,130,246,0.14)] hover:shadow-[0_0_24px_rgba(59,130,246,0.25)] hover:scale-[1.01] transition-all duration-200 ease-in-out ${scrolled ? 'opacity-100 -translate-y-[3px] shadow-[0_0_14px_rgba(59,130,246,0.25)]' : 'opacity-[0.85] -translate-y-[2px] shadow-[0_0_16px_rgba(59,130,246,0.15)]'}`}
             data-testid="link-hablemos"
           >
             <span className="relative">HABLEMOS</span>
