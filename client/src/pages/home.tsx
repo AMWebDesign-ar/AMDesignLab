@@ -542,14 +542,14 @@ function ContactSection() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full" 
+                  className="w-full h-12 text-base font-semibold tracking-wide" 
                   disabled={isSubmitting}
                   data-testid="button-submit-contact"
                 >
                   {isSubmitting ? (
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
                   ) : (
-                    <Send className="w-4 h-4 mr-2" />
+                    <Send className="w-5 h-5 mr-2" />
                   )}
                   {isSubmitting ? "Enviando..." : "Enviar mensaje"}
                 </Button>
