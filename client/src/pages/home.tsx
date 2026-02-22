@@ -544,7 +544,7 @@ function ContactSection() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full h-12 text-base font-semibold tracking-wide" 
+                  className="w-full h-14 text-base font-semibold tracking-wide py-6" 
                   disabled={isSubmitting}
                   data-testid="button-submit-contact"
                 >
