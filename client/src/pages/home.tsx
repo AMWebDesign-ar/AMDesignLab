@@ -202,10 +202,10 @@ function HeroSection() {
           data-testid="badge-hero"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-          <span className="text-[1.05rem] text-foreground/90 relative z-10">✦ Creamos webs que convierten visitas en clientes</span>
+          <span className="text-[0.85rem] sm:text-[1.05rem] text-foreground/90 relative z-10">✦ Creamos webs que convierten visitas en clientes</span>
         </motion.div>
         <motion.h1 
-          className="text-[2.6rem] sm:text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto"
+          className="text-[2.2rem] sm:text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto px-2 sm:px-0"
           initial={{ opacity: 0, filter: "blur(24px)", scale: 1.08 }}
           animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
           transition={{ duration: 4, ease: [0.03, 0.6, 0.08, 1], delay: 0.5 }}
@@ -513,7 +513,7 @@ function ContactSection() {
 
   return (
     <section id="contacto" className="py-20 md:py-32 relative bg-[hsl(220,8%,15%)]" data-testid="section-contacto">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-primary/5 rounded-full blur-3xl" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start max-w-5xl mx-auto">
           <motion.div 
