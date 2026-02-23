@@ -277,7 +277,7 @@ function HeroSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 px-2 sm:px-0">
             <CredStat icon={TrendingUp} value={3} suffix="+" label="años en el mercado" unit="años" />
             <CredStat icon={Award} value={100} suffix="+" label="proyectos entregados" unit="proyectos" />
-            <CredStat icon={Users} value={6} suffix="" label="disciplinas en el equipo" unit="perfiles" />
+            <CredStat icon={Users} value={11} suffix="" label="disciplinas en el equipo" unit="perfiles" />
           </div>
 
           <motion.div 
@@ -286,7 +286,7 @@ function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.8 }}
           >
-            {["Analistas", "QA", "UX/UI", "Psicología Social", "Project Managers", "Desarrolladores"].map((role) => (
+            {["UX/UI", "Analistas de Sistemas", "QA & Testing", "Cinematografía", "Copywriting", "Scrum Master", "Project Manager", "Psicología Social", "Coaching", "Marketing Digital", "Community Manager"].map((role) => (
               <span
                 key={role}
                 className="px-3 py-1 text-[0.7rem] sm:text-xs text-foreground/70 rounded-full border border-white/[0.06] bg-white/[0.03] backdrop-blur-sm"
