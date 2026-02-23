@@ -294,7 +294,7 @@ function CredStat({ icon: Icon, value, suffix, label }: { icon: typeof TrendingU
   const { count, ref } = useCountUp(value, 2200);
   return (
     <div 
-      className="flex flex-col items-center py-3 sm:py-4 px-3 rounded-xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm hover:bg-white/[0.04] hover:border-white/[0.12] transition-all duration-500 group"
+      className="flex flex-col items-center py-3 sm:py-4 px-3 rounded-xl bg-white/[0.01] border border-white/[0.04] backdrop-blur-[2px] hover:bg-white/[0.03] hover:border-white/[0.08] transition-all duration-500 group"
       data-testid={`stat-${label.replace(/\s/g, '-')}`}
     >
       <Icon className="w-4 h-4 text-foreground/25 mb-1.5 group-hover:text-foreground/40 transition-colors duration-500" />
