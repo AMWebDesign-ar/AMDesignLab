@@ -299,14 +299,14 @@ function CredStat({ icon: Icon, value, suffix, label }: { icon: typeof TrendingU
   const { count, ref } = useCountUp(value, 2200);
   return (
     <div 
-      className="flex flex-col items-center py-5 px-4 rounded-2xl bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm hover:bg-white/[0.06] hover:border-primary/20 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-500 group"
+      className="flex flex-col items-center py-3 sm:py-4 px-3 rounded-xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm hover:bg-white/[0.04] hover:border-white/[0.12] transition-all duration-500 group"
       data-testid={`stat-${label.replace(/\s/g, '-')}`}
     >
-      <Icon className="w-5 h-5 text-foreground/30 mb-2 group-hover:text-foreground/50 transition-colors duration-500" />
-      <span ref={ref} className="text-2xl sm:text-3xl font-bold text-foreground/80 tracking-tight">
+      <Icon className="w-4 h-4 text-foreground/25 mb-1.5 group-hover:text-foreground/40 transition-colors duration-500" />
+      <span ref={ref} className="text-xl sm:text-2xl font-semibold text-foreground/75 tracking-tight">
         {count}{suffix}
       </span>
-      <span className="text-[0.7rem] sm:text-xs text-foreground/50 mt-1 uppercase tracking-widest">{label}</span>
+      <span className="text-[0.65rem] sm:text-[0.7rem] text-foreground/40 mt-1 uppercase tracking-widest">{label}</span>
     </div>
   );
 }
