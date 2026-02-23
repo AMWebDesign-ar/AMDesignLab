@@ -256,7 +256,7 @@ function HeroSection() {
         >
           <a 
             href="#servicios"
-            className="inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.4)] bg-[rgba(59,130,246,0.08)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_10px_rgba(59,130,246,0.4)] shadow-[0_0_14px_rgba(59,130,246,0.15),inset_0_0_10px_rgba(59,130,246,0.08)] hover:bg-[rgba(59,130,246,0.15)] hover:border-[rgba(59,130,246,0.6)] hover:shadow-[0_0_24px_rgba(59,130,246,0.3),inset_0_0_14px_rgba(59,130,246,0.12)] hover:[text-shadow:0_0_16px_rgba(59,130,246,0.6)] hover:scale-[1.05] active:scale-[0.97] transition-all duration-300 ease-in-out"
+            className="inline-flex items-center px-9 py-3 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.3)] bg-[rgba(59,130,246,0.06)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_8px_rgba(59,130,246,0.3)] shadow-[0_0_10px_rgba(59,130,246,0.1)] hover:bg-[rgba(59,130,246,0.12)] hover:border-[rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.25)] hover:[text-shadow:0_0_14px_rgba(59,130,246,0.5)] hover:scale-[1.05] active:scale-[0.97] transition-all duration-300 ease-in-out"
             data-testid="button-hero-servicios"
           >
             EMPEZAR AHORA
@@ -821,7 +821,7 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden relative">
       <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
+        className="fixed inset-0 bg-cover bg-[center_60%] bg-no-repeat z-0"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       <div className="fixed inset-0 bg-black/40 z-0" />
