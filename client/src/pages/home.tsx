@@ -27,7 +27,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { SiWhatsapp } from "react-icons/si";
-import heroImage from "@assets/generated_images/dark_tech_workspace_hero.png";
+import heroImage from "@assets/new_fondo_1771890051649.jpeg";
 import logoImage from "@assets/3f8056a9-1bc4-499f-aaf6-703a3d27b814_1768005490289.png";
 
 function useCountUp(target: number, duration: number = 2000, startOnView: boolean = true) {
@@ -211,9 +211,8 @@ function HeroSection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,12%,10%)]/60 via-[hsl(218,10%,14%)]/35 to-[hsl(220,8%,12%)]/85" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,10%,11%)]/45 via-transparent to-[hsl(220,10%,11%)]/45" />
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-[hsl(217,40%,18%)]/5 to-[hsl(217,40%,22%)]/4" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(59,130,246,0.08),transparent_70%)] blur-[60px] pointer-events-none" />
       
       <motion.div 
