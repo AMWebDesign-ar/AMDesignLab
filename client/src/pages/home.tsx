@@ -76,7 +76,7 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50" data-testid="header">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
         <a href="#inicio" className="flex items-center gap-2 hover:opacity-80 transition-opacity translate-y-[2px]" data-testid="logo-brand">
           <motion.img 
             src={logoImage} 
@@ -191,7 +191,7 @@ function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(59,130,246,0.08),transparent_70%)] blur-[60px] pointer-events-none" />
       
       <motion.div 
-        className="max-w-7xl mx-auto px-6 py-20 pt-[calc(5rem+15px)] text-center relative z-10"
+        className="max-w-7xl mx-auto px-4 sm:px-6 py-20 pt-[calc(5rem+15px)] text-center relative z-10"
         initial="initial"
         animate="animate"
         variants={staggerContainer}
@@ -205,7 +205,7 @@ function HeroSection() {
           <span className="text-[1.05rem] text-foreground/90 relative z-10">✦ Creamos webs que convierten visitas en clientes</span>
         </motion.div>
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto"
+          className="text-[2.6rem] sm:text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto"
           initial={{ opacity: 0, filter: "blur(24px)", scale: 1.08 }}
           animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
           transition={{ duration: 4, ease: [0.03, 0.6, 0.08, 1], delay: 0.5 }}
@@ -282,7 +282,7 @@ function ServicesSection() {
 
   return (
     <section id="servicios" className="py-20 md:py-32 relative bg-[hsl(220,8%,14%)]" data-testid="section-servicios">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50, filter: "blur(6px)" }}
@@ -411,7 +411,7 @@ function WhyChooseUsSection() {
   return (
     <section id="nosotros" className="py-20 md:py-32 bg-[hsl(220,6%,11%)] relative" data-testid="section-nosotros">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 50, filter: "blur(6px)" }}
@@ -514,7 +514,7 @@ function ContactSection() {
   return (
     <section id="contacto" className="py-20 md:py-32 relative bg-[hsl(220,8%,15%)]" data-testid="section-contacto">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start max-w-5xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 50, filter: "blur(6px)" }}
@@ -641,7 +641,7 @@ function ContactSection() {
 function Footer() {
   return (
     <footer className="py-12 border-t border-border bg-[hsl(220,6%,9%)]" data-testid="footer">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div 
           className="flex flex-col md:flex-row items-center justify-between gap-6"
           initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
@@ -707,7 +707,7 @@ function FloatingButtons() {
         {!showScrollTop && (
           <motion.a
             href="#contacto"
-            className="md:hidden fixed top-[76px] right-5 z-40 inline-flex items-center px-4 py-1.5 text-[0.6rem] font-semibold text-white rounded-full border border-[rgba(59,130,246,0.5)] bg-[rgba(59,130,246,0.1)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_10px_rgba(59,130,246,0.5)] shadow-[0_0_14px_rgba(59,130,246,0.2),inset_0_0_10px_rgba(59,130,246,0.1)] hover:bg-[rgba(59,130,246,0.18)] hover:border-[rgba(59,130,246,0.7)] hover:shadow-[0_0_24px_rgba(59,130,246,0.35),inset_0_0_14px_rgba(59,130,246,0.15)] hover:[text-shadow:0_0_16px_rgba(59,130,246,0.7)] hover:scale-[1.08] active:scale-[0.97] transition-all duration-300 ease-in-out"
+            className="md:hidden fixed top-[76px] right-3 z-40 inline-flex items-center px-4 py-1.5 text-[0.6rem] font-semibold text-white rounded-full border border-[rgba(59,130,246,0.5)] bg-[rgba(59,130,246,0.1)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_10px_rgba(59,130,246,0.5)] shadow-[0_0_14px_rgba(59,130,246,0.2),inset_0_0_10px_rgba(59,130,246,0.1)] hover:bg-[rgba(59,130,246,0.18)] hover:border-[rgba(59,130,246,0.7)] hover:shadow-[0_0_24px_rgba(59,130,246,0.35),inset_0_0_14px_rgba(59,130,246,0.15)] hover:[text-shadow:0_0_16px_rgba(59,130,246,0.7)] hover:scale-[1.08] active:scale-[0.97] transition-all duration-300 ease-in-out"
             data-testid="link-hablemos"
             initial={{ opacity: 0, y: -8, scale: 0.95, filter: "blur(6px)" }}
             animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
@@ -759,7 +759,7 @@ function FloatingButtons() {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       <main>
         <HeroSection />
