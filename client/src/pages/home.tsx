@@ -228,7 +228,13 @@ function HeroSection() {
           data-testid="badge-hero"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-          <span className="text-[0.85rem] sm:text-[1.05rem] text-foreground/90 relative z-10">Creamos webs que convierten visitas en clientes</span>
+          <span className="text-[0.85rem] sm:text-[1.05rem] text-foreground/90 relative z-10 flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary/60 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary/80" />
+            </span>
+            Creamos webs que convierten visitas en clientes
+          </span>
         </motion.div>
         <motion.h1 
           className="text-[2.2rem] sm:text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto px-2 sm:px-0"
