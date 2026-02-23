@@ -217,12 +217,11 @@ function HeroSection() {
         variants={staggerContainer}
       >
         <motion.div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/25 backdrop-blur-sm overflow-hidden relative mb-7"
+          className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] backdrop-blur-md overflow-hidden relative mb-7"
           variants={fadeInUp}
           data-testid="badge-hero"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
-          <span className="text-[0.85rem] sm:text-[1.05rem] text-foreground/90 relative z-10 flex items-center gap-2">
+          <span className="text-[0.85rem] sm:text-[1.05rem] text-foreground/70 relative z-10 flex items-center gap-2">
             <span className="relative flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full rounded-full bg-blue-400 animate-[slowPulse_3.5s_ease-in-out_infinite]" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)]" />
