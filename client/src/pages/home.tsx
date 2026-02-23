@@ -280,28 +280,11 @@ function HeroSection() {
             <CredStat icon={Users} value={11} suffix="" label="disciplinas en el equipo" unit="perfiles" />
           </div>
 
-          <motion.div 
-            className="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3"
+          <motion.p 
+            className="mt-6 text-[0.75rem] sm:text-sm text-foreground/50 max-w-lg mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.8 }}
-          >
-            {["UX/UI", "Analistas de Sistemas", "QA & Testing", "Cinematografía", "Copywriting", "Scrum Master", "Project Manager", "Psicología Social", "Coaching", "Marketing Digital", "Community Manager"].map((role) => (
-              <span
-                key={role}
-                className="px-3 py-1 text-[0.7rem] sm:text-xs text-foreground/70 rounded-full border border-white/[0.06] bg-white/[0.03] backdrop-blur-sm"
-                data-testid={`tag-role-${role.toLowerCase().replace(/[\s\/]/g, '-')}`}
-              >
-                {role}
-              </span>
-            ))}
-          </motion.div>
-
-          <motion.p 
-            className="mt-4 text-[0.75rem] sm:text-sm text-foreground/50 max-w-lg mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 3.2 }}
           >
             Un equipo multidisciplinario con experiencia real en productos digitales
           </motion.p>
