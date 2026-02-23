@@ -207,12 +207,7 @@ function Header() {
 function HeroSection() {
   return (
     <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20" data-testid="section-hero">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(59,130,246,0.08),transparent_70%)] blur-[60px] pointer-events-none" />
       
       <motion.div 
@@ -351,7 +346,7 @@ function ServicesSection() {
   };
 
   return (
-    <section id="servicios" className="py-20 md:py-32 relative bg-[hsl(220,8%,14%)]" data-testid="section-servicios">
+    <section id="servicios" className="py-20 md:py-32 relative bg-black/75 backdrop-blur-sm" data-testid="section-servicios">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div 
           className="text-center mb-16"
@@ -479,7 +474,7 @@ const benefits = [
 
 function WhyChooseUsSection() {
   return (
-    <section id="nosotros" className="py-20 md:py-32 bg-[hsl(220,6%,11%)] relative" data-testid="section-nosotros">
+    <section id="nosotros" className="py-20 md:py-32 relative bg-black/65" data-testid="section-nosotros">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
@@ -582,7 +577,7 @@ function ContactSection() {
   };
 
   return (
-    <section id="contacto" className="py-20 md:py-32 relative bg-[hsl(220,8%,15%)]" data-testid="section-contacto">
+    <section id="contacto" className="py-20 md:py-32 relative bg-black/70 backdrop-blur-sm" data-testid="section-contacto">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-primary/5 rounded-full blur-3xl" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start max-w-5xl mx-auto">
@@ -710,7 +705,7 @@ function ContactSection() {
 
 function Footer() {
   return (
-    <footer className="py-12 border-t border-border bg-[hsl(220,6%,9%)]" data-testid="footer">
+    <footer className="py-12 border-t border-border bg-black/85" data-testid="footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div 
           className="flex flex-col md:flex-row items-center justify-between gap-6"
@@ -829,16 +824,23 @@ function FloatingButtons() {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
-      <Header />
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <WhyChooseUsSection />
-        <ContactSection />
-      </main>
-      <Footer />
-      <FloatingButtons />
+    <div className="min-h-screen overflow-x-hidden relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
+      <div className="fixed inset-0 bg-black/40 z-0" />
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <HeroSection />
+          <ServicesSection />
+          <WhyChooseUsSection />
+          <ContactSection />
+        </main>
+        <Footer />
+        <FloatingButtons />
+      </div>
     </div>
   );
 }
