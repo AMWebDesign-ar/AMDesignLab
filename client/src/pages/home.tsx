@@ -277,7 +277,7 @@ function HeroSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 px-2 sm:px-0">
             <CredStat icon={TrendingUp} value={3} suffix="+" label="años en el mercado" unit="años" />
             <CredStat icon={Award} value={100} suffix="+" label="proyectos" unit="proyectos" />
-            <CredStat icon={Users} value={11} suffix="" label="disciplinas en el equipo" unit="perfiles" />
+            <CredStat icon={Users} value={11} suffix="" label="perfiles profesionales" unit="perfiles" />
           </div>
 
           <motion.p 
