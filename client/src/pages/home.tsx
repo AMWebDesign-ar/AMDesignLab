@@ -286,7 +286,7 @@ function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.8 }}
           >
-            Un equipo multidisciplinario con experiencia real en productos digitales
+            Un equipo multidisciplinario detrás de cada proyecto
           </motion.p>
         </motion.div>
 
