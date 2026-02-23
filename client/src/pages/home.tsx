@@ -257,14 +257,10 @@ function HeroSection() {
         >
           <a 
             href="#servicios"
-            className="relative inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full overflow-hidden group shadow-[0_0_20px_rgba(59,130,246,0.35)] cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
+            className="inline-flex items-center px-7 py-2.5 text-xs font-semibold text-white rounded-full border border-[rgba(59,130,246,0.4)] bg-[rgba(59,130,246,0.08)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_10px_rgba(59,130,246,0.4)] shadow-[0_0_14px_rgba(59,130,246,0.15),inset_0_0_10px_rgba(59,130,246,0.08)] hover:bg-[rgba(59,130,246,0.15)] hover:border-[rgba(59,130,246,0.6)] hover:shadow-[0_0_24px_rgba(59,130,246,0.3),inset_0_0_14px_rgba(59,130,246,0.12)] hover:[text-shadow:0_0_16px_rgba(59,130,246,0.6)] hover:scale-[1.05] active:scale-[0.97] transition-all duration-300 ease-in-out"
             data-testid="button-hero-servicios"
           >
-            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
-            <span className="absolute inset-[2px] rounded-full bg-background/90 group-hover:bg-background/70 transition-colors" />
-            <span className="relative">
-              EMPEZAR AHORA
-            </span>
+            EMPEZAR AHORA
           </a>
         </motion.div>
 
@@ -682,7 +678,7 @@ function ContactSection() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full h-14 text-base font-semibold tracking-wide py-6 border border-[rgba(59,130,246,0.3)] shadow-[0_0_12px_rgba(59,130,246,0.12),inset_0_0_8px_rgba(59,130,246,0.06)] hover:shadow-[0_0_30px_rgba(59,130,246,0.3),inset_0_0_14px_rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.5)] hover:scale-[1.03] hover:[text-shadow:0_0_10px_rgba(255,255,255,0.3)] active:scale-[0.98] transition-all duration-500 ease-out" 
+                  className="w-full h-14 text-base font-semibold tracking-wide py-6 bg-[rgba(59,130,246,0.1)] border border-[rgba(59,130,246,0.35)] backdrop-blur-[6px] [text-shadow:0_0_8px_rgba(59,130,246,0.3)] shadow-[0_0_12px_rgba(59,130,246,0.1),inset_0_0_8px_rgba(59,130,246,0.06)] hover:bg-[rgba(59,130,246,0.18)] hover:shadow-[0_0_24px_rgba(59,130,246,0.25),inset_0_0_14px_rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.55)] hover:scale-[1.02] hover:[text-shadow:0_0_14px_rgba(59,130,246,0.5)] active:scale-[0.98] transition-all duration-500 ease-out" 
                   disabled={isSubmitting}
                   data-testid="button-submit-contact"
                 >
