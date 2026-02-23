@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { 
   Code2, 
   Search, 
@@ -17,7 +17,10 @@ import {
   Menu,
   X,
   Send,
-  Loader2
+  Loader2,
+  Users,
+  Award,
+  TrendingUp
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -26,6 +29,29 @@ import { useToast } from "@/hooks/use-toast";
 import { SiWhatsapp } from "react-icons/si";
 import heroImage from "@assets/generated_images/dark_tech_workspace_hero.png";
 import logoImage from "@assets/3f8056a9-1bc4-499f-aaf6-703a3d27b814_1768005490289.png";
+
+function useCountUp(target: number, duration: number = 2000, startOnView: boolean = true) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const hasStarted = useRef(false);
+
+  useEffect(() => {
+    if (!startOnView || !inView || hasStarted.current) return;
+    hasStarted.current = true;
+    const startTime = performance.now();
+    const animate = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * target));
+      if (progress < 1) requestAnimationFrame(animate);
+    };
+    requestAnimationFrame(animate);
+  }, [inView, target, duration, startOnView]);
+
+  return { count, ref };
+}
 
 const WHATSAPP_LINK = "https://wa.me/542236663939";
 const EMAIL = "contacto.amdigital@gmail.com";
@@ -241,8 +267,64 @@ function HeroSection() {
             </span>
           </a>
         </motion.div>
+
+        <motion.div 
+          className="mt-16 sm:mt-20 w-full max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.12, 0.8, 0.2, 1], delay: 1.8 }}
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 px-2 sm:px-0">
+            <CredStat icon={TrendingUp} value={3} suffix="+" label="años en el mercado" unit="años" />
+            <CredStat icon={Award} value={100} suffix="+" label="proyectos entregados" unit="proyectos" />
+            <CredStat icon={Users} value={6} suffix="" label="disciplinas en el equipo" unit="perfiles" />
+          </div>
+
+          <motion.div 
+            className="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.8 }}
+          >
+            {["Analistas", "QA", "UX/UI", "Psicología Social", "Project Managers", "Desarrolladores"].map((role) => (
+              <span
+                key={role}
+                className="px-3 py-1 text-[0.7rem] sm:text-xs text-foreground/70 rounded-full border border-white/[0.06] bg-white/[0.03] backdrop-blur-sm"
+                data-testid={`tag-role-${role.toLowerCase().replace(/[\s\/]/g, '-')}`}
+              >
+                {role}
+              </span>
+            ))}
+          </motion.div>
+
+          <motion.p 
+            className="mt-4 text-[0.75rem] sm:text-sm text-foreground/50 max-w-lg mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 3.2 }}
+          >
+            Un equipo multidisciplinario con experiencia real en productos digitales
+          </motion.p>
+        </motion.div>
+
       </motion.div>
     </section>
+  );
+}
+
+function CredStat({ icon: Icon, value, suffix, label }: { icon: typeof TrendingUp; value: number; suffix: string; label: string; unit: string }) {
+  const { count, ref } = useCountUp(value, 2200);
+  return (
+    <div 
+      className="flex flex-col items-center py-5 px-4 rounded-2xl bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm hover:bg-white/[0.06] hover:border-primary/20 hover:shadow-[0_0_20px_rgba(59,130,246,0.08)] transition-all duration-500 group"
+      data-testid={`stat-${label.replace(/\s/g, '-')}`}
+    >
+      <Icon className="w-5 h-5 text-primary/60 mb-2 group-hover:text-primary/90 transition-colors duration-500" />
+      <span ref={ref} className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+        {count}{suffix}
+      </span>
+      <span className="text-[0.7rem] sm:text-xs text-foreground/50 mt-1 uppercase tracking-widest">{label}</span>
+    </div>
   );
 }
 
