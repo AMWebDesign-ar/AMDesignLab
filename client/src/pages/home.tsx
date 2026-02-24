@@ -207,7 +207,7 @@ function Header() {
 
 function HeroSection() {
   return (
-    <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20" data-testid="section-hero">
+    <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 mt-[6px]" data-testid="section-hero">
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(59,130,246,0.08),transparent_70%)] blur-[60px] pointer-events-none" />
       
