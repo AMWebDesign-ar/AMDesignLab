@@ -230,7 +230,7 @@ function HeroSection() {
           </span>
         </motion.div>
         <motion.h1 
-          className="text-[2.2rem] sm:text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto px-2 sm:px-0"
+          className="text-[2.2rem] sm:text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.1] tracking-[-0.04em] drop-shadow-lg [text-shadow:0_0_30px_rgba(59,130,246,0.15)] max-w-4xl mx-auto px-2 sm:px-0 -mt-[10px]"
           initial={{ opacity: 0, filter: "blur(24px)", scale: 1.08 }}
           animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
           transition={{ duration: 4, ease: [0.03, 0.6, 0.08, 1], delay: 0.5 }}
@@ -239,7 +239,7 @@ function HeroSection() {
         >
           <span className="font-medium tracking-[0.04em] text-[0.92em] bg-gradient-to-r from-[#5a8abf] via-[#7ba8d4] to-[#4a7aaf] bg-clip-text text-transparent opacity-[0.87]">Tu web</span> <span className="font-semibold tracking-[0em]" style={{ color: '#E6EDF5' }}>lista para vender</span>
           <br />
-          <span className="font-light tracking-[0em] leading-[1.35]" style={{ color: '#E6EDF5' }}>y posicionar</span>
+          <span className="font-light tracking-[0em] leading-[1.5]" style={{ color: '#E6EDF5' }}>y posicionar</span>
         </motion.h1>
         
         <motion.p 
