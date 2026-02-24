@@ -677,7 +677,7 @@ function ContactSection() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full h-14 text-base font-semibold tracking-wide py-6 bg-[rgba(59,130,246,0.1)] border border-[rgba(59,130,246,0.35)] backdrop-blur-[6px] [text-shadow:0_0_8px_rgba(59,130,246,0.3)] shadow-[0_0_12px_rgba(59,130,246,0.1),inset_0_0_8px_rgba(59,130,246,0.06)] hover:bg-[rgba(59,130,246,0.18)] hover:shadow-[0_0_24px_rgba(59,130,246,0.25),inset_0_0_14px_rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.55)] hover:scale-[1.02] hover:[text-shadow:0_0_14px_rgba(59,130,246,0.5)] active:scale-[0.98] transition-all duration-500 ease-out" 
+                  className="w-full h-14 text-base font-semibold tracking-wide py-6 bg-[rgba(59,130,246,0.08)] border-2 border-[rgba(59,130,246,0.25)] backdrop-blur-[6px] [text-shadow:0_0_8px_rgba(59,130,246,0.3)] shadow-[0_0_16px_rgba(59,130,246,0.12),0_2px_8px_rgba(0,0,0,0.15)] hover:bg-[rgba(59,130,246,0.14)] hover:shadow-[0_0_22px_rgba(59,130,246,0.2),0_2px_12px_rgba(0,0,0,0.2)] hover:border-[rgba(59,130,246,0.4)] hover:scale-[1.02] hover:[text-shadow:0_0_14px_rgba(59,130,246,0.5)] active:scale-[0.98] transition-all duration-500 ease-out" 
                   disabled={isSubmitting}
                   data-testid="button-submit-contact"
                 >
