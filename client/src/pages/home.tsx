@@ -239,7 +239,7 @@ function HeroSection() {
         >
           <span className="font-medium tracking-[0.04em] text-[0.92em] bg-gradient-to-r from-[#5a8abf] via-[#7ba8d4] to-[#4a7aaf] bg-clip-text text-transparent opacity-[0.87]">Tu web</span> <span className="font-semibold tracking-[0em]" style={{ color: '#E6EDF5' }}>lista para vender</span>
           <br />
-          <span className="font-normal tracking-[0em] leading-[1.35]" style={{ color: '#E6EDF5' }}>y posicionar</span>
+          <span className="font-light tracking-[0em] leading-[1.35]" style={{ color: '#E6EDF5' }}>y posicionar</span>
         </motion.h1>
         
         <motion.p 
