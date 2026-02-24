@@ -107,11 +107,11 @@ function Header() {
           <motion.img 
             src={logoImage} 
             alt="AM Digital" 
-            className="w-10 h-10 rounded-full object-cover"
+            className="w-8 h-8 rounded-full object-cover"
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
-          <span className="text-[0.95rem] font-bold text-white tracking-[0.02em] [text-shadow:0_0_12px_rgba(59,130,246,0.25)] drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", WebkitFontSmoothing: "antialiased" }}>AM Web Design</span>
+          <span className="text-[0.9rem] font-normal tracking-[0.06em] opacity-80" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", WebkitFontSmoothing: "antialiased", color: '#D8E3F0' }}>AM Web Design</span>
         </a>
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6" data-testid="nav-main">
           <a 
