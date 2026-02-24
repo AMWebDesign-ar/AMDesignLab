@@ -351,7 +351,7 @@ function ServicesSection() {
           transition={{ duration: 1, ease: [0.12, 0.8, 0.2, 1] }}
         >
           <motion.h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight" 
+            className="text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight" 
             data-testid="text-servicios-title"
             initial={{ opacity: 0, y: 25, scale: 0.97 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
