@@ -237,7 +237,7 @@ function HeroSection() {
           data-testid="text-hero-title"
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
         >
-          <span className="font-extrabold tracking-[-0.02em] bg-gradient-to-r from-blue-400 via-blue-300 to-blue-500 bg-clip-text text-transparent">Tu web</span> <span style={{ color: '#E6EDF5' }}>lista para vender
+          <span className="font-extrabold tracking-[-0.02em] bg-gradient-to-r from-[#5a8abf] via-[#7ba8d4] to-[#4a7aaf] bg-clip-text text-transparent">Tu web</span> <span style={{ color: '#E6EDF5' }}>lista para vender
           <br />
           y posicionar</span>
         </motion.h1>
