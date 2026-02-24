@@ -111,7 +111,7 @@ function Header() {
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
-          <span className="text-[0.94rem]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", fontWeight: 550, color: '#FFFFFF', opacity: 1, letterSpacing: '0.2px', WebkitFontSmoothing: "antialiased" }}>AM Web Design</span>
+          <span className="text-[0.94rem]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", fontWeight: 600, color: '#FFFFFF', opacity: 1, letterSpacing: '0.2px', WebkitFontSmoothing: "antialiased" }}>AM Web Design</span>
         </a>
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6" data-testid="nav-main">
           <a 
@@ -726,7 +726,7 @@ function Footer() {
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />
-              <span className="text-[0.94rem]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", fontWeight: 550, color: '#FFFFFF', opacity: 1, letterSpacing: '0.2px', WebkitFontSmoothing: "antialiased" }}>AM Web Design</span>
+              <span className="text-[0.94rem]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", fontWeight: 600, color: '#FFFFFF', opacity: 1, letterSpacing: '0.2px', WebkitFontSmoothing: "antialiased" }}>AM Web Design</span>
             </div>
           </motion.div>
           
