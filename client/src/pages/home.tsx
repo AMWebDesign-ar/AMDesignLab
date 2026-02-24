@@ -243,7 +243,8 @@ function HeroSection() {
         </motion.h1>
         
         <motion.p 
-          className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto -mt-1 mb-10 drop-shadow-md"
+          className="text-lg md:text-xl max-w-2xl mx-auto -mt-1 mb-10"
+          style={{ color: 'rgba(210, 225, 245, 0.9)', textShadow: '0 0 20px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.4)' }}
           variants={fadeInUp}
           data-testid="text-hero-subtitle"
         >
@@ -256,7 +257,8 @@ function HeroSection() {
         >
           <a 
             href="#servicios"
-            className="inline-flex items-center px-9 py-3 text-xs font-semibold text-white rounded-full border border-[rgba(120,190,255,0.35)] bg-[rgba(59,130,246,0.06)] backdrop-blur-[6px] cursor-pointer [text-shadow:0_0_8px_rgba(59,130,246,0.3)] shadow-[0_0_18px_rgba(80,160,255,0.18)] hover:bg-[rgba(59,130,246,0.12)] hover:border-[rgba(120,190,255,0.55)] hover:shadow-[0_0_26px_rgba(80,160,255,0.28)] hover:[text-shadow:0_0_14px_rgba(59,130,246,0.5)] hover:scale-[1.05] active:scale-[0.97] transition-all duration-300 ease-in-out"
+            className="inline-flex items-center px-9 py-3.5 text-xs font-semibold text-white rounded-full border border-[rgba(120,190,255,0.45)] bg-[rgba(59,130,246,0.12)] backdrop-blur-[8px] cursor-pointer shadow-[0_0_22px_rgba(80,160,255,0.22),inset_0_0_12px_rgba(120,180,255,0.06)] hover:bg-[rgba(59,130,246,0.18)] hover:border-[rgba(120,190,255,0.6)] hover:shadow-[0_0_30px_rgba(80,160,255,0.32),inset_0_0_16px_rgba(120,180,255,0.1)] hover:scale-[1.05] active:scale-[0.97] transition-all duration-300 ease-in-out"
+            style={{ textShadow: '0 0 10px rgba(100,170,255,0.4), 0 0 20px rgba(59,130,246,0.2)' }}
             data-testid="button-hero-servicios"
           >
             EMPEZAR AHORA
