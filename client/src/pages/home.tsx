@@ -108,6 +108,7 @@ function Header() {
             src={logoImage} 
             alt="AM Digital" 
             className="w-8 h-8 rounded-full object-cover"
+            style={{ filter: 'drop-shadow(0 0 4px rgba(90,160,255,0.18))' }}
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
@@ -723,6 +724,7 @@ function Footer() {
                 src={logoImage} 
                 alt="AM Digital" 
                 className="w-8 h-8 rounded-full object-cover"
+                style={{ filter: 'drop-shadow(0 0 4px rgba(90,160,255,0.18))' }}
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />
