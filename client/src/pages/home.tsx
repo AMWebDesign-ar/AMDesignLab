@@ -101,18 +101,28 @@ function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50" style={{ background: 'rgba(10,15,25,0.85)', backdropFilter: 'blur(16px)', transform: 'scale(0.96)', opacity: 0.95 }} data-testid="header">
+    //<header className="fixed top-0 left-0 right-0 z-50" style={{ background: 'rgba(10,15,25,0.85)', backdropFilter: 'blur(16px)', transform: 'scale(0.96)', opacity: 0.95 }} data-testid="header">
+    <header
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+  ${scrolled
+    ? "bg-[rgba(10,15,25,0.88)] backdrop-blur-xl border-b border-white/[0.05]"
+    : "bg-[rgba(10,15,25,0.55)] backdrop-blur-md"
+  }`}
+>
       <div className="max-w-7xl mx-auto pl-[28px] pr-4 sm:pr-6 py-[18px] flex items-center justify-between gap-3">
         <a href="#inicio" className="flex items-center gap-[10px] hover:opacity-80 transition-opacity translate-y-[2px]" data-testid="logo-brand">
           <motion.img 
             src={logoImage} 
             alt="AM Digital" 
-            className="w-8 h-8 rounded-full object-cover"
-            style={{ filter: 'drop-shadow(0 0 4px rgba(90,160,255,0.18))' }}
+            //className="w-8 h-8 rounded-full object-cover"
+            className="w-8 h-8 rounded-full object-cover opacity-90"
+            //style={{ filter: 'drop-shadow(0 0 4px rgba(90,160,255,0.18))' }}
+            style={{ filter: 'drop-shadow(0 0 6px rgba(90,160,255,0.22))' }}
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
-          <span className="text-[0.94rem]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", fontWeight: 600, color: '#FFFFFF', opacity: 1, letterSpacing: '0.2px', WebkitFontSmoothing: "antialiased" }}>AM Web Design</span>
+          <span className="text-[0.9rem] tracking-[0.04em] text-white/90"> AM Web Design</span>
+          {/* <span className="text-[0.94rem]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", fontWeight: 600, color: '#FFFFFF', opacity: 1, letterSpacing: '0.2px', WebkitFontSmoothing: "antialiased" }}>AM Web Design</span> */}
         </a>
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6" data-testid="nav-main">
           <a 
