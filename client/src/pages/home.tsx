@@ -111,18 +111,15 @@ function Header() {
 >
       <div className="max-w-7xl mx-auto pl-[28px] pr-4 sm:pr-6 py-[18px] flex items-center justify-between gap-3">
         <a href="#inicio" className="flex items-center gap-[10px] hover:opacity-80 transition-opacity translate-y-[2px]" data-testid="logo-brand">
-          <motion.img 
-            src={logoImage} 
-            alt="AM Digital" 
-            //className="w-8 h-8 rounded-full object-cover"
-            className="w-8 h-8 rounded-full object-cover opacity-90"
-            //style={{ filter: 'drop-shadow(0 0 4px rgba(90,160,255,0.18))' }}
-            style={{ filter: 'drop-shadow(0 0 6px rgba(90,160,255,0.22))' }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          />
-          <span className="text-[0.9rem] tracking-[0.04em] text-white/90"> AM Web Design</span>
-          {/* <span className="text-[0.94rem]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", fontWeight: 600, color: '#FFFFFF', opacity: 1, letterSpacing: '0.2px', WebkitFontSmoothing: "antialiased" }}>AM Web Design</span> */}
+          <div className="flex flex-col leading-tight">
+          <div className="relative inline-block">
+            <span className="text-[0.95rem] tracking-[0.08em] text-white">
+              <span className="font-semibold text-white">AM</span>{" "}
+              <span className="text-white/80 font-normal">Design Lab</span>
+            </span>
+            <div className="creative-line"></div>
+          </div>
+      </div>
         </a>
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6" data-testid="nav-main">
           <a 
@@ -282,19 +279,45 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.12, 0.8, 0.2, 1], delay: 1.8 }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 px-2 sm:px-0">
-            <CredStat icon={TrendingUp} value={3} suffix="+" label="años en el mercado" unit="años" />
-            <CredStat icon={Award} value={100} suffix="+" label="proyectos" unit="proyectos" />
-            <CredStat icon={Users} value={11} suffix="" label="perfiles profesionales" unit="perfiles" />
+          <div className="md:scale-105">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
+              <CredStat
+                icon={TrendingUp}
+                value={3}
+                suffix="+"
+                label="Años en el mercado"
+                duration={2600}
+              />
+
+              <CredStat
+                icon={Award}
+                value={100}
+                suffix="+"
+                label="Proyectos"
+                duration={1400}
+                className="px-14 md:scale-110"
+              />
+
+              <CredStat
+                icon={Users}
+                value={11}
+                suffix=""
+                label="Perfiles profesionales"
+                duration={2000}
+              />
+            </div>
           </div>
 
           <motion.p 
-            className="mt-6 text-[0.75rem] sm:text-sm text-foreground/50 max-w-lg mx-auto"
+            className="mt-6 text-[0.75rem] sm:text-sm text-foreground/30 max-w-lg mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.8 }}
           >
-            Un equipo multidisciplinario detrás de cada proyecto
+            <div className="w-45 h-[1px] bg-white/20 mx-auto mb-6 mt-10"></div>
+            <p className="text-base md:text-lg text-white/75 text-center tracking-wide">
+  Un equipo multidisciplinario detrás de cada proyecto
+</p>
           </motion.p>
         </motion.div>
 
@@ -303,19 +326,66 @@ function HeroSection() {
   );
 }
 
-function CredStat({ icon: Icon, value, suffix, label }: { icon: typeof TrendingUp; value: number; suffix: string; label: string; unit: string }) {
-  const { count, ref } = useCountUp(value, 2200);
+function CredStat({
+  icon: Icon,
+  value,
+  suffix,
+  label,
+  duration,
+  className = ""
+}: {
+  icon: typeof TrendingUp;
+  value: number;
+  suffix: string;
+  label: string;
+  duration: number;
+  className?: string;
+})
+{
+
+
+  const { count, ref } = useCountUp(value, duration);
   return (
-    <div 
-      className="flex flex-col items-center py-3 sm:py-4 px-3 rounded-xl bg-white/[0.01] border border-white/[0.04] backdrop-blur-[2px] hover:bg-white/[0.03] hover:border-white/[0.08] transition-all duration-500 group"
+    <motion.div
+      initial={{ opacity: 0, y: 40, scale: 0.95, filter: "blur(6px)" }}
+      whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.9, ease: [0.12, 0.8, 0.2, 1] }}
+      className="
+                  flex flex-col items-center 
+                  py-8 sm:py-10 px-10
+                  min-w-[240px]
+                  rounded-2xl
+                  bg-white/[0.04]
+                  border border-white/[0.1]
+                  backdrop-blur-md
+                  shadow-[0_8px_32px_rgba(0,0,0,0.35)]
+                  hover:-translate-y-2
+                  hover:bg-white/[0.06]
+                  hover:border-white/[0.2]
+                  transition-all duration-500
+                  group ${className}
+                "
       data-testid={`stat-${label.replace(/\s/g, '-')}`}
     >
-      <Icon className="w-4 h-4 text-foreground/25 mb-1.5 group-hover:text-foreground/40 transition-colors duration-500" />
-      <span ref={ref} className="text-xl sm:text-2xl font-semibold text-foreground/75 tracking-tight">
+<Icon className="
+  w-6 h-6 
+  text-blue-400
+  mb-3
+  group-hover:text-blue-300
+  transition-colors duration-500
+"/>
+      <span
+        ref={ref}
+        className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground/80 tracking-tight group-hover:text-white transition-colors duration-500"
+      >
         {count}{suffix}
       </span>
-      <span className="text-[0.65rem] sm:text-[0.7rem] text-foreground/40 mt-1 uppercase tracking-widest">{label}</span>
-    </div>
+
+      <span className="text-xs sm:text-sm sm:text-[0.75rem] text-foreground/40 mt-1 uppercase tracking-widest group-hover:text-foreground/60 transition-colors duration-500">
+        {label}
+      </span>
+    </motion.div>
   );
 }
 
@@ -729,17 +799,18 @@ function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.85, delay: 0.15, ease: [0.12, 0.8, 0.2, 1] }}
           >
-            <div className="flex items-center gap-[10px]" data-testid="footer-brand">
-              <motion.img 
-                src={logoImage} 
-                alt="AM Digital" 
-                className="w-8 h-8 rounded-full object-cover"
-                style={{ filter: 'drop-shadow(0 0 4px rgba(90,160,255,0.18))' }}
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
-              <span className="text-[0.94rem]" style={{ fontFamily: "'DM Sans', 'Inter', sans-serif", fontWeight: 600, color: '#FFFFFF', opacity: 1, letterSpacing: '0.2px', WebkitFontSmoothing: "antialiased" }}>AM Web Design</span>
+                      <div className="flex flex-col items-center md:items-start" data-testid="footer-brand">
+            <div className="relative inline-block text-center md:text-left">
+              
+              <span className="text-[0.95rem] tracking-[0.08em] text-white">
+                <span className="font-semibold text-white">AM</span>{" "}
+                <span className="text-white/80 font-normal">Design Lab</span>
+              </span>
+
+              <div className="creative-line"></div>
+
             </div>
+          </div>
           </motion.div>
           
           <motion.div 
@@ -750,7 +821,7 @@ function Footer() {
             transition={{ duration: 0.85, delay: 0.25, ease: [0.12, 0.8, 0.2, 1] }}
           >
             <p className="text-xs text-muted-foreground" data-testid="text-footer-copyright">
-              © {new Date().getFullYear()} AM Web Design. Todos los derechos reservados.
+              © {new Date().getFullYear()} AM Design Lab. Todos los derechos reservados.
             </p>
           </motion.div>
         </motion.div>
