@@ -1,25 +1,32 @@
-import type { Express } from "express";
-import { createServer, type Server } from "http";
-import { storage } from "./storage";
-import { insertContactMessageSchema } from "@shared/schema";
+import { Express, Request, Response } from "express";
+import { Resend } from "resend";
 
-export async function registerRoutes(
-  httpServer: Server,
-  app: Express
-): Promise<Server> {
-  app.post("/api/contact", async (req, res) => {
-    const result = insertContactMessageSchema.safeParse(req.body);
-    if (!result.success) {
-      return res.status(400).json({ message: "Datos inválidos", errors: result.error.flatten() });
-    }
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export function registerRoutes(app: Express) {
+
+  app.post("/api/contact", async (req: Request, res: Response) => {
     try {
-      const message = await storage.createContactMessage(result.data);
-      return res.status(201).json(message);
+      const { nombreApellido, telefono, consulta } = req.body;
+
+      await resend.emails.send({
+        from: "AM Design Lab <contacto@amdesignlab-ar.com>",
+        to: "contacto@amdesignlab-ar.com",
+        subject: "Nueva consulta desde la web",
+        html: `
+          <h2>Nueva consulta</h2>
+          <p><b>Nombre:</b> ${nombreApellido}</p>
+          <p><b>Teléfono:</b> ${telefono}</p>
+          <p>${consulta}</p>
+        `,
+      });
+
+      res.json({ success: true });
+
     } catch (error) {
-      console.error("Error saving contact message:", error);
-      return res.status(500).json({ message: "Error al guardar el mensaje" });
+      console.error(error);
+      res.status(500).json({ message: "Error enviando mail" });
     }
   });
 
-  return httpServer;
 }
