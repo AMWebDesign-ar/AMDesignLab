@@ -10,7 +10,6 @@ export function registerRoutes(app: Express) {
 
     const { nombreApellido, email, telefono, consulta } = req.body;
 
-    // MAIL PARA VOS
     await resend.emails.send({
       from: "AM Design Lab <contacto@amdesignlab-ar.com>",
       to: "contacto@amdesignlab-ar.com",
@@ -24,7 +23,19 @@ export function registerRoutes(app: Express) {
       `,
     });
 
-    // MAIL AUTOMÁTICO AL CLIENTE
+    await fetch("https://script.google.com/macros/s/AKfycbzS8MuWVBWqCa3G0U0kaf01viac8iPR1lkDVzBDUSf5MvC_Kz1vNvMqMf9mGL62VqzYLw/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nombreApellido,
+          email,
+          telefono,
+          consulta,
+        }),
+      });
+
     await resend.emails.send({
       from: "AM Design Lab <contacto@amdesignlab-ar.com>",
       to: email,
@@ -33,6 +44,9 @@ export function registerRoutes(app: Express) {
         <p>Hola ${nombreApellido},</p>
         <p>Recibimos tu consulta correctamente.</p>
         <p>Te responderemos pronto.</p>
+        <p></p>
+        <p>Atte.</p>
+        <p>Equipo de AM Design Lab</p>
       `,
     });
 
@@ -41,7 +55,7 @@ export function registerRoutes(app: Express) {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error enviando mail" });
-    console.log("Formulario recibido:", req.body);
+    
   }
 });
 }
