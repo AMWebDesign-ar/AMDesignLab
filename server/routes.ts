@@ -1,5 +1,5 @@
-import { Express, Request, Response } from "express";
 import { Resend } from "resend";
+import { Express, Request, Response } from "express";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -7,6 +7,9 @@ export function registerRoutes(app: Express) {
 
   app.post("/api/contact", async (req: Request, res: Response) => {
     try {
+
+      const resend = new Resend(process.env.RESEND_API_KEY);
+
       const { nombreApellido, telefono, consulta } = req.body;
 
       await resend.emails.send({

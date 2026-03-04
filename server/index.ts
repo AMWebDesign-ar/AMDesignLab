@@ -27,7 +27,6 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
-// logger
 function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString();
   console.log(`${formattedTime} [${source}] ${message}`);
@@ -46,17 +45,14 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  // ✅ API routes
   await registerRoutes(app);
 
-  // ✅ error handler
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     res.status(err.status || 500).json({
       message: err.message || "Internal Server Error",
     });
   });
 
-  // ✅ FRONTEND CONNECTION (ESTO FALTABA BIEN)
   if (process.env.NODE_ENV === "production") {
     serveStatic(app);
   } else {
