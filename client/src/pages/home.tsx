@@ -631,13 +631,19 @@ function WhyChooseUsSection() {
 
 function ContactSection() {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({ nombreApellido: "", telefono: "", consulta: "" });
+  const [formData, setFormData] = useState({ 
+  nombreApellido: "", 
+  email: "",
+  telefono: "", 
+  consulta: "",
+  website: "" 
+});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.nombreApellido || !formData.telefono || !formData.consulta) {
+    if (!formData.nombreApellido || !formData.email || !formData.telefono || !formData.consulta) {
       toast({ title: "Completá todos los campos", variant: "destructive" });
       return;
     }
@@ -645,7 +651,7 @@ function ContactSection() {
     try {
       await apiRequest("POST", "/api/contact", formData);
       setSubmitted(true);
-      setFormData({ nombreApellido: "", telefono: "", consulta: "" });
+      setFormData({ nombreApellido: "", email: "", telefono: "", consulta: "",   website: "" });
       toast({ title: "¡Mensaje enviado!", description: "Nos pondremos en contacto pronto." });
     } catch {
       toast({ title: "Error al enviar", description: "Intentá de nuevo más tarde.", variant: "destructive" });
@@ -733,6 +739,13 @@ function ContactSection() {
               <>
               <p className="text-foreground/80 text-sm mb-3 font-medium">Te responderemos en menos de 24 hs.</p>
               <form onSubmit={handleSubmit} className="space-y-4" data-testid="form-contact">
+                <input
+                  type="text"
+                  name="website"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
                 <div>
                   <Input
                     placeholder="Nombre y apellido"
@@ -741,6 +754,13 @@ function ContactSection() {
                     data-testid="input-nombre"
                   />
                 </div>
+                   <Input
+                    type="email"
+                    placeholder="Email de contacto"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  />
+                <div></div>
                 <div>
                   <Input
                     placeholder="Teléfono de contacto"
