@@ -54,7 +54,7 @@ function useCountUp(target: number, duration: number = 2000, startOnView: boolea
 }
 
 const WHATSAPP_LINK = "https://wa.me/542236663939";
-const EMAIL = "contacto@amdesignlabar.com.ar";
+const EMAIL = "contacto@amdesignlab.com.ar";
 const PHONE = "5492236663939";
 
 const fadeInUp = {
