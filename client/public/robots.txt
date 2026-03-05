@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amdesignlab.com.ar/sitemap.xml
