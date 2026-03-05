@@ -24,7 +24,7 @@ AM Web Design is a professional one-page website for a digital agency targeting 
 - Dark mode only (no light mode toggle)
 - Prefers slow, cinematic animations
 - Logo: DM Sans font, white, blue text-shadow glow, antialiased
-
+//8
 ## Mobile Responsiveness Lessons Learned
 
 **CRITICAL for all future projects:**
