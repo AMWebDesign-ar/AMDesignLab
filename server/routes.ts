@@ -11,8 +11,8 @@ export function registerRoutes(app: Express) {
     const { nombreApellido, email, telefono, consulta } = req.body;
 
     await resend.emails.send({
-      from: "AM Design Lab <contacto@amdesignlab-ar.com>",
-      to: "contacto@amdesignlab-ar.com",
+      from: "AM Design Lab <contacto@amdesignlab.com.ar>",
+      to: "contacto@amdesignlab.com.ar",
       subject: "Nueva consulta desde la web",
       html: `
         <h2>Nueva consulta</h2>
@@ -37,7 +37,7 @@ export function registerRoutes(app: Express) {
       });
 
     await resend.emails.send({
-      from: "AM Design Lab <contacto@amdesignlab-ar.com>",
+      from: "AM Design Lab <contacto@amdesignlab.com.ar >",
       to: email,
       subject: "Recibimos tu consulta ✔",
       html: `
