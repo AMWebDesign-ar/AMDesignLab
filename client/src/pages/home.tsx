@@ -12,7 +12,6 @@ import {
   MessageCircle, 
   Mail,
   Phone,
-  ArrowRight,
   ArrowUp,
   Menu,
   X,
@@ -28,7 +27,6 @@ import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { SiWhatsapp } from "react-icons/si";
 import heroImage from "@assets/new_fondo_1771890051649.jpeg";
-import logoImage from "@assets/3f8056a9-1bc4-499f-aaf6-703a3d27b814_1768005490289.png";
 
 function useCountUp(target: number, duration: number = 2000, startOnView: boolean = true) {
   const [count, setCount] = useState(0);
@@ -331,9 +329,7 @@ function CredStat({
   value,
   suffix,
   label,
-  duration,
-  className = ""
-}: {
+  duration}: {
   icon: typeof TrendingUp;
   value: number;
   suffix: string;

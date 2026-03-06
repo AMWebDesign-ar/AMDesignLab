@@ -1,8 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-console.log("RESEND KEY:", process.env.RESEND_API_KEY);
-
 import express, { Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
@@ -47,10 +45,24 @@ app.use((req, res, next) => {
 (async () => {
   await registerRoutes(app);
 
-  app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
-    res.status(err.status || 500).json({
-      message: err.message || "Internal Server Error",
-    });
+  app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
+    const status =
+      typeof err === "object" &&
+      err !== null &&
+      "status" in err &&
+      typeof (err as { status?: unknown }).status === "number"
+        ? (err as { status: number }).status
+        : 500;
+
+    const message =
+      typeof err === "object" &&
+      err !== null &&
+      "message" in err &&
+      typeof (err as { message?: unknown }).message === "string"
+        ? (err as { message: string }).message
+        : "Internal Server Error";
+
+    res.status(status).json({ message });
   });
 
   if (process.env.NODE_ENV === "production") {

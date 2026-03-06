@@ -6,3 +6,8 @@ vite.config.ts.*
 *.tar.gz
 .local/
 **/.local/
+.env
+build
+.next
+.env.*
+!.env.example

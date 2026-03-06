@@ -1,0 +1,22 @@
+[
+ {
+  "RuleID": "generic-api-key",
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 1,
+  "EndLine": 1,
+  "StartColumn": 1,
+  "EndColumn": 51,
+  "Match": "RESEND_API_KEY=re_jQ3WtYGD_LbANMhw98JkAymhYGBsad8eq",
+  "Secret": "re_jQ3WtYGD_LbANMhw98JkAymhYGBsad8eq",
+  "File": ".env",
+  "SymlinkFile": "",
+  "Commit": "",
+  "Entropy": 4.781036,
+  "Author": "",
+  "Email": "",
+  "Date": "",
+  "Message": "",
+  "Tags": [],
+  "Fingerprint": ".env:generic-api-key:1"
+ }
+]
