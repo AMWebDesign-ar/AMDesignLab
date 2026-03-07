@@ -11,7 +11,9 @@
     "db:push": "drizzle-kit push",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:unused": "knip"
+    "lint:unused": "knip",
+    "prepare": "husky",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
@@ -55,8 +57,11 @@
     "eslint": "^9.39.3",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^17.4.0",
+    "husky": "^9.1.7",
     "knip": "^5.85.0",
+    "lint-staged": "^16.3.2",
     "postcss": "^8.4.47",
+    "prettier": "^3.8.1",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.20.5",
     "typescript": "5.6.3",
@@ -70,5 +75,14 @@
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
